@@ -1,0 +1,2846 @@
+{
+  "_schema": "EDB must_include audit manifest — status covered|gap; covered items require passing evidence.",
+  "version": 1,
+  "generated_from": "curriculum.json",
+  "units": {
+    "4N1": [
+      {
+        "item": "兩位數×兩位數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N1",
+            "contains": "兩位數×兩位數"
+          },
+          {
+            "type": "level_name",
+            "code": "4N1",
+            "contains": "兩位數 × 兩位數"
+          },
+          {
+            "type": "compute",
+            "contains": "da: 2, db: 2"
+          }
+        ]
+      },
+      {
+        "item": "三位數×兩位數（或兩位數×三位數）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N1",
+            "contains": "三位數×兩位數（或兩位數×三位數）"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4N1",
+            "contains": "三位數×兩位數"
+          },
+          {
+            "type": "compute",
+            "contains": "da: 3, db: 2"
+          }
+        ]
+      },
+      {
+        "item": "進位乘法",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N1",
+            "contains": "進位乘法"
+          },
+          {
+            "type": "level_name",
+            "code": "4N1",
+            "contains": "進位乘法"
+          },
+          {
+            "type": "compute",
+            "contains": "carry: true"
+          }
+        ]
+      },
+      {
+        "item": "估算計算結果",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N1",
+            "contains": "估算計算結果"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'estimate_mul'"
+          }
+        ]
+      }
+    ],
+    "4N2": [
+      {
+        "item": "兩位數÷兩位數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N2",
+            "contains": "兩位數÷兩位數"
+          },
+          {
+            "type": "level_name",
+            "code": "4N2",
+            "contains": "兩位數 ÷ 兩位數"
+          },
+          {
+            "type": "visual",
+            "unit": 2,
+            "contains": "data-ad-interactive=\"long-div\""
+          },
+          {
+            "type": "compute",
+            "contains": "bd: 2, dlo: 10, dhi: 99"
+          }
+        ]
+      },
+      {
+        "item": "三位數÷兩位數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N2",
+            "contains": "三位數÷兩位數"
+          },
+          {
+            "type": "level_name",
+            "code": "4N2",
+            "contains": "三位數 ÷ 兩位數"
+          },
+          {
+            "type": "compute",
+            "contains": "bd: 2, dlo: 100, dhi: 999"
+          }
+        ]
+      },
+      {
+        "item": "退位除法",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N2",
+            "contains": "退位除法"
+          }
+        ]
+      },
+      {
+        "item": "有餘數除法",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N2",
+            "contains": "有餘數除法"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'div_rem'"
+          }
+        ]
+      },
+      {
+        "item": "2、3、5、10的整除性判別",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N2",
+            "contains": "2、3、5、10的整除性判別"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'odd_even'"
+          }
+        ]
+      }
+    ],
+    "4N3": [
+      {
+        "item": "用乘法找一個數的倍數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N3",
+            "contains": "用乘法找一個數的倍數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'nth_multiple'"
+          }
+        ]
+      },
+      {
+        "item": "找一個數的所有因數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N3",
+            "contains": "找一個數的所有因數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'count_factors'"
+          }
+        ]
+      },
+      {
+        "item": "1是任意數的因數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N3",
+            "contains": "1是任意數的因數"
+          }
+        ]
+      },
+      {
+        "item": "任意數都是1的倍數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N3",
+            "contains": "任意數都是1的倍數"
+          }
+        ]
+      },
+      {
+        "item": "用整除性判斷100以內的數是否質數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N3",
+            "contains": "用整除性判斷100以內的數是否質數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'prime_mixed'"
+          }
+        ]
+      },
+      {
+        "item": "用愛氏篩找100以內所有質數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N3",
+            "contains": "用愛氏篩找100以內所有質數"
+          },
+          {
+            "type": "visual",
+            "unit": 3,
+            "contains": "data-ad-interactive=\"sieve\""
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'sieve_step'"
+          }
+        ]
+      }
+    ],
+    "4N4": [
+      {
+        "item": "列舉法",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N4",
+            "contains": "列舉法"
+          },
+          {
+            "type": "visual",
+            "unit": 4,
+            "contains": "列舉法對照"
+          }
+        ]
+      },
+      {
+        "item": "短除法",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N4",
+            "contains": "短除法"
+          },
+          {
+            "type": "visual",
+            "unit": 4,
+            "contains": "data-ad-interactive=\"short-div\""
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'short_div_step'"
+          }
+        ]
+      },
+      {
+        "item": "觀察L.C.M.與其他公倍數的關係",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N4",
+            "contains": "觀察L.C.M.與其他公倍數的關係"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4N4",
+            "contains": "公倍數"
+          },
+          {
+            "type": "visual",
+            "unit": 4,
+            "contains": "最小公倍數"
+          }
+        ]
+      }
+    ],
+    "4N5": [
+      {
+        "item": "乘法分配性質應用",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N5",
+            "contains": "乘法分配性質應用"
+          },
+          {
+            "type": "visual",
+            "unit": 5,
+            "contains": "分配律"
+          },
+          {
+            "type": "compute",
+            "contains": "spec.form === 7"
+          }
+        ]
+      },
+      {
+        "item": "除加/除減/除乘混合",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N5",
+            "contains": "除加/除減/除乘混合"
+          },
+          {
+            "type": "level_name",
+            "code": "4N5",
+            "contains": "除法混合"
+          },
+          {
+            "type": "visual",
+            "unit": 5,
+            "contains": "先除"
+          },
+          {
+            "type": "compute",
+            "contains": "spec.form === 4"
+          }
+        ]
+      },
+      {
+        "item": "有括號的混合運算",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N5",
+            "contains": "有括號的混合運算"
+          },
+          {
+            "type": "visual",
+            "unit": 5,
+            "contains": "data-ad-interactive=\"order-ops\""
+          }
+        ]
+      },
+      {
+        "item": "以歸一法解正比例應用題",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N5",
+            "contains": "以歸一法解正比例應用題"
+          },
+          {
+            "type": "question_bank",
+            "unit": 5,
+            "contains": "歸一法：先求 1 本"
+          }
+        ]
+      }
+    ],
+    "4N6": [
+      {
+        "item": "假分數化帶分數（或整數）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N6",
+            "contains": "假分數化帶分數（或整數）"
+          },
+          {
+            "type": "visual",
+            "unit": 6,
+            "contains": "data-ad-interactive=\"improper-mixed\""
+          }
+        ]
+      },
+      {
+        "item": "帶分數（或整數）化假分數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N6",
+            "contains": "帶分數（或整數）化假分數"
+          },
+          {
+            "type": "visual",
+            "unit": 6,
+            "contains": "improper-mixed"
+          }
+        ]
+      },
+      {
+        "item": "最簡分數概念",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N6",
+            "contains": "最簡分數概念"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4N6",
+            "contains": "最簡分數"
+          },
+          {
+            "type": "level_name",
+            "code": "4N6",
+            "contains": "最簡分數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'fsimplify'"
+          }
+        ]
+      },
+      {
+        "item": "比較同分母分數及分數與整數大小",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N6",
+            "contains": "比較同分母分數及分數與整數大小"
+          },
+          {
+            "type": "concept",
+            "unit": 6,
+            "contains": "比較同分母分數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'fany_same'"
+          }
+        ]
+      },
+      {
+        "item": "分數與整數的加減及加減混合運算",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N6",
+            "contains": "分數與整數的加減及加減混合運算"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4N6",
+            "contains": "同分母加減"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'fadd_same'"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'fsub_same'"
+          }
+        ]
+      }
+    ],
+    "4N7": [
+      {
+        "item": "小數點分整數部分和小數部分",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N7",
+            "contains": "小數點分整數部分和小數部分"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "decimalPlaceNextBtn"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "小數點分整數部分和小數部分"
+          }
+        ]
+      },
+      {
+        "item": "各數位意義",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N7",
+            "contains": "各數位意義"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "4代表什麼"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "十分位"
+          }
+        ]
+      },
+      {
+        "item": "一至四位小數分類",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N7",
+            "contains": "一至四位小數分類"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "0.3=0.30"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "一位小數"
+          }
+        ]
+      },
+      {
+        "item": "比較整數/分數（分母為100的因數）/小數大小",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N7",
+            "contains": "比較整數/分數（分母為100的因數）/小數大小"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "0.45vs0.5"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "0.5 > 0.45"
+          }
+        ]
+      },
+      {
+        "item": "簡單度量單位化聚如1.234升=1234毫升",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N7",
+            "contains": "簡單度量單位化聚如1.234升=1234毫升"
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "data-ad-interactive=\"unit-conv\""
+          },
+          {
+            "type": "visual",
+            "unit": 7,
+            "contains": "1.234升 = 1234毫升"
+          }
+        ]
+      }
+    ],
+    "4N8": [
+      {
+        "item": "涉及整數、一位或兩位小數的加減及加減混合",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N8",
+            "contains": "涉及整數、一位或兩位小數的加減及加減混合"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4N8",
+            "contains": "加減混合"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'dmix'"
+          }
+        ]
+      },
+      {
+        "item": "認識整數加法交換/結合性質適用於小數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4N8",
+            "contains": "認識整數加法交換/結合性質適用於小數"
+          },
+          {
+            "type": "concept",
+            "unit": 8,
+            "contains": "交換"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'dadd'"
+          }
+        ]
+      }
+    ],
+    "4M1": [
+      {
+        "item": "量度規則和不規則簡單平面圖形周界",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M1",
+            "contains": "量度規則和不規則簡單平面圖形周界"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4M1",
+            "contains": "周界"
+          },
+          {
+            "type": "level_name",
+            "code": "4M1",
+            "contains": "認識周界"
+          }
+        ]
+      },
+      {
+        "item": "正方形長方形周界公式解應用題",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M1",
+            "contains": "正方形長方形周界公式解應用題"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4M1",
+            "contains": "周界公式"
+          },
+          {
+            "type": "level_name",
+            "code": "4M1",
+            "contains": "長方形周界"
+          }
+        ]
+      },
+      {
+        "item": "求由正方形長方形拼砌的平面圖形周界",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M1",
+            "contains": "求由正方形長方形拼砌的平面圖形周界"
+          },
+          {
+            "type": "visual",
+            "unit": 9,
+            "contains": "data-ad-interactive=\"composite-perimeter\""
+          }
+        ]
+      },
+      {
+        "item": "量度前先估計",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M1",
+            "contains": "量度前先估計"
+          },
+          {
+            "type": "concept",
+            "unit": 9,
+            "contains": "估計"
+          }
+        ]
+      }
+    ],
+    "4M2": [
+      {
+        "item": "重疊圖形直接比較",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M2",
+            "contains": "重疊圖形直接比較"
+          },
+          {
+            "type": "concept",
+            "unit": 10,
+            "contains": "重疊圖形直接比較"
+          }
+        ]
+      },
+      {
+        "item": "間接比較面積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M2",
+            "contains": "間接比較面積"
+          },
+          {
+            "type": "concept",
+            "unit": 10,
+            "contains": "間接比較面積"
+          }
+        ]
+      },
+      {
+        "item": "用方格紙找規則及不規則圖形面積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M2",
+            "contains": "用方格紙找規則及不規則圖形面積"
+          },
+          {
+            "type": "level_name",
+            "code": "4M2",
+            "contains": "數方格"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'area_grid'"
+          }
+        ]
+      },
+      {
+        "item": "面積公式解應用題（含由面積求邊長）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M2",
+            "contains": "面積公式解應用題（含由面積求邊長）"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4M2",
+            "contains": "面積公式"
+          }
+        ]
+      },
+      {
+        "item": "求由正方形長方形拼砌的平面圖形面積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4M2",
+            "contains": "求由正方形長方形拼砌的平面圖形面積"
+          },
+          {
+            "type": "concept",
+            "unit": 10,
+            "contains": "拼砌的平面圖形面積"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'area_mixed'"
+          }
+        ]
+      }
+    ],
+    "4S1": [
+      {
+        "item": "菱形四邊相等、兩組對邊平行",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S1",
+            "contains": "菱形四邊相等、兩組對邊平行"
+          },
+          {
+            "type": "concept",
+            "unit": 11,
+            "contains": "菱形四邊相等"
+          }
+        ]
+      },
+      {
+        "item": "正方形皆是長方形",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S1",
+            "contains": "正方形皆是長方形"
+          },
+          {
+            "type": "concept",
+            "unit": 11,
+            "contains": "正方形皆是長方形"
+          }
+        ]
+      },
+      {
+        "item": "正方形長方形菱形皆是平行四邊形",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S1",
+            "contains": "正方形長方形菱形皆是平行四邊形"
+          },
+          {
+            "type": "concept",
+            "unit": 11,
+            "contains": "平行四邊形"
+          }
+        ]
+      },
+      {
+        "item": "正方形皆是菱形",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S1",
+            "contains": "正方形皆是菱形"
+          },
+          {
+            "type": "concept",
+            "unit": 11,
+            "contains": "正方形皆是菱形"
+          }
+        ]
+      }
+    ],
+    "4S2": [
+      {
+        "item": "認識多邊形定義",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S2",
+            "contains": "認識多邊形定義"
+          }
+        ]
+      },
+      {
+        "item": "根據原圖形性質判斷分割後小多邊形性質",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S2",
+            "contains": "根據原圖形性質判斷分割後小多邊形性質"
+          },
+          {
+            "type": "visual",
+            "unit": 12,
+            "contains": "data-ad-interactive=\"shape-split-compose\""
+          }
+        ]
+      },
+      {
+        "item": "根據原圖形性質判斷拼砌後多邊形性質",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S2",
+            "contains": "根據原圖形性質判斷拼砌後多邊形性質"
+          },
+          {
+            "type": "visual",
+            "unit": 12,
+            "contains": "shape-split-compose"
+          }
+        ]
+      }
+    ],
+    "4S3": [
+      {
+        "item": "描述物件相對位置",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S3",
+            "contains": "描述物件相對位置"
+          }
+        ]
+      },
+      {
+        "item": "用指南針找八個方向",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S3",
+            "contains": "用指南針找八個方向"
+          },
+          {
+            "type": "edb_scope",
+            "code": "4S3",
+            "contains": "八個方向"
+          },
+          {
+            "type": "level_name",
+            "code": "4S3",
+            "contains": "八個方向"
+          }
+        ]
+      },
+      {
+        "item": "根據路徑圖選擇路徑（含向左/右轉）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4S3",
+            "contains": "根據路徑圖選擇路徑（含向左/右轉）"
+          },
+          {
+            "type": "concept",
+            "unit": 13,
+            "contains": "向左轉、向右轉"
+          },
+          {
+            "type": "visual",
+            "unit": 13,
+            "contains": "路徑"
+          }
+        ]
+      }
+    ],
+    "4D1": [
+      {
+        "item": "一格代表10/50/100單位",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4D1",
+            "contains": "一格代表10/50/100單位"
+          },
+          {
+            "type": "visual",
+            "unit": 14,
+            "contains": "每格 = 10"
+          },
+          {
+            "type": "concept",
+            "unit": 14,
+            "contains": "每格代表固定數量"
+          }
+        ]
+      },
+      {
+        "item": "橫向和縱向棒形圖",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4D1",
+            "contains": "橫向和縱向棒形圖"
+          },
+          {
+            "type": "concept",
+            "unit": 14,
+            "contains": "橫向和縱向棒形圖"
+          }
+        ]
+      },
+      {
+        "item": "四捨五入湊整至十位或百位",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4D1",
+            "contains": "四捨五入湊整至十位或百位"
+          },
+          {
+            "type": "concept",
+            "unit": 14,
+            "contains": "四捨五入湊整"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'round_to'"
+          }
+        ]
+      },
+      {
+        "item": "頻數表記錄數據",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "4D1",
+            "contains": "頻數表記錄數據"
+          },
+          {
+            "type": "concept",
+            "unit": 14,
+            "contains": "頻數表"
+          }
+        ]
+      }
+    ],
+    "5N1": [
+      {
+        "item": "十萬/百萬/千萬/億位意義",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N1",
+            "contains": "十萬/百萬/千萬/億位意義"
+          },
+          {
+            "type": "edb_scope",
+            "code": "5N1",
+            "contains": "億"
+          }
+        ]
+      },
+      {
+        "item": "順數倒數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N1",
+            "contains": "順數倒數"
+          },
+          {
+            "type": "concept",
+            "unit": 15,
+            "contains": "順數和倒數"
+          }
+        ]
+      }
+    ],
+    "5N2": [
+      {
+        "item": "異分母分數比較及與整數比較",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N2",
+            "contains": "異分母分數比較及與整數比較"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'fcompare_diff'"
+          },
+          {
+            "type": "visual",
+            "unit": 16,
+            "contains": "data-visual-compare"
+          }
+        ]
+      },
+      {
+        "item": "通分後運算",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N2",
+            "contains": "通分後運算"
+          },
+          {
+            "type": "visual",
+            "unit": 16,
+            "contains": "data-ad-interactive=\"common-denom\""
+          }
+        ]
+      },
+      {
+        "item": "分母可為任何公倍數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N2",
+            "contains": "分母可為任何公倍數"
+          },
+          {
+            "type": "visual",
+            "unit": 16,
+            "contains": "data-visual-any-multiple"
+          }
+        ]
+      }
+    ],
+    "5N3": [
+      {
+        "item": "分數乘法可包括整數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N3",
+            "contains": "分數乘法可包括整數"
+          },
+          {
+            "type": "visual",
+            "unit": 17,
+            "contains": "data-ad-interactive=\"frac-area-multiply\""
+          }
+        ]
+      },
+      {
+        "item": "帶分數化假分數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N3",
+            "contains": "帶分數化假分數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'fmul_mixed'"
+          }
+        ]
+      },
+      {
+        "item": "整數寫作分母為1的分數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N3",
+            "contains": "整數寫作分母為1的分數"
+          },
+          {
+            "type": "level_name",
+            "code": "5N3",
+            "contains": "整數作分數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'int_as_frac'"
+          }
+        ]
+      }
+    ],
+    "5N4": [
+      {
+        "item": "小數×整數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N4",
+            "contains": "小數×整數"
+          },
+          {
+            "type": "visual",
+            "unit": 18,
+            "contains": "data-ad-interactive=\"decimal-shift\""
+          }
+        ]
+      },
+      {
+        "item": "小數×小數（小數為一位或兩位）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N4",
+            "contains": "小數×小數（小數為一位或兩位）"
+          },
+          {
+            "type": "edb_scope",
+            "code": "5N4",
+            "contains": "小數×小數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'dmuldec'"
+          }
+        ]
+      },
+      {
+        "item": "確定積的小數點位置",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N4",
+            "contains": "確定積的小數點位置"
+          }
+        ]
+      },
+      {
+        "item": "用符號≈",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N4",
+            "contains": "用符號≈"
+          },
+          {
+            "type": "level_name",
+            "code": "5N4",
+            "contains": "估算乘積（≈）"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'estimate_dmul'"
+          }
+        ]
+      }
+    ],
+    "5N5": [
+      {
+        "item": "分數為兩整數相除的商或比",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N5",
+            "contains": "分數為兩整數相除的商或比"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'frac_as_quotient'"
+          }
+        ]
+      },
+      {
+        "item": "分數除以整數、整數除以分數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N5",
+            "contains": "分數除以整數、整數除以分數"
+          },
+          {
+            "type": "visual",
+            "unit": 19,
+            "contains": "data-ad-interactive=\"reciprocal-div\""
+          }
+        ]
+      },
+      {
+        "item": "分數四則混合運算（三個數）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N5",
+            "contains": "分數四則混合運算（三個數）"
+          },
+          {
+            "type": "edb_scope",
+            "code": "5N5",
+            "contains": "分數四則"
+          }
+        ]
+      },
+      {
+        "item": "有餘數除法應用題",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N5",
+            "contains": "有餘數除法應用題"
+          },
+          {
+            "type": "level_name",
+            "code": "5N5",
+            "contains": "有餘數除法應用題"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'div_rem_word'"
+          }
+        ]
+      },
+      {
+        "item": "推展至非整數運算的歸一法",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5N5",
+            "contains": "推展至非整數運算的歸一法"
+          },
+          {
+            "type": "level_name",
+            "code": "5N5",
+            "contains": "非整數歸一法"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'unitary_dec'"
+          }
+        ]
+      }
+    ],
+    "5A1": [
+      {
+        "item": "只涉及一個未知量",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5A1",
+            "contains": "只涉及一個未知量"
+          }
+        ]
+      },
+      {
+        "item": "認識3x、x/3等記法",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5A1",
+            "contains": "認識3x、x/3等記法"
+          },
+          {
+            "type": "concept",
+            "unit": 20,
+            "contains": "3x"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'algebra_expr'"
+          }
+        ]
+      }
+    ],
+    "5A2": [
+      {
+        "item": "八類方程：x+b=c、x−b=c、ax=b、x/a=b、ax+b=c、ax−b=c、x/a+b=c、x/a−b=c（a,b,c為整數,a≠0）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5A2",
+            "contains": "八類方程：x+b=c、x−b=c、ax=b、x/a=b、ax+b=c、ax−b=c、x/a+b=c、x/a−b=c（a,b,c為整數,a≠0）"
+          },
+          {
+            "type": "concept",
+            "unit": 21,
+            "contains": "八類方程"
+          },
+          {
+            "type": "compute",
+            "contains": "ty === 'ax-b'"
+          }
+        ]
+      },
+      {
+        "item": "以天平模擬解方程",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5A2",
+            "contains": "以天平模擬解方程"
+          },
+          {
+            "type": "visual",
+            "unit": 21,
+            "contains": "data-ad-interactive=\"balance-solver\""
+          }
+        ]
+      },
+      {
+        "item": "解後驗算",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5A2",
+            "contains": "解後驗算"
+          },
+          {
+            "type": "concept",
+            "unit": 21,
+            "contains": "代回驗算"
+          }
+        ]
+      }
+    ],
+    "5M1": [
+      {
+        "item": "三角形和凸四邊形各邊對應的高",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5M1",
+            "contains": "三角形和凸四邊形各邊對應的高"
+          },
+          {
+            "type": "visual",
+            "unit": 22,
+            "contains": "data-ad-interactive=\"area-height\""
+          },
+          {
+            "type": "concept",
+            "unit": 22,
+            "contains": "垂直高"
+          }
+        ]
+      },
+      {
+        "item": "平行四邊形/三角形/梯形面積公式解應用題",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5M1",
+            "contains": "平行四邊形/三角形/梯形面積公式解應用題"
+          },
+          {
+            "type": "visual",
+            "unit": 22,
+            "contains": "data-ad-interactive=\"area-height\""
+          }
+        ]
+      },
+      {
+        "item": "分割或填補求多邊形面積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5M1",
+            "contains": "分割或填補求多邊形面積"
+          },
+          {
+            "type": "edb_scope",
+            "code": "5M1",
+            "contains": "多邊形面積"
+          }
+        ]
+      }
+    ],
+    "5M2": [
+      {
+        "item": "以立方厘米量度比較體積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5M2",
+            "contains": "以立方厘米量度比較體積"
+          },
+          {
+            "type": "edb_scope",
+            "code": "5M2",
+            "contains": "立方厘米"
+          }
+        ]
+      },
+      {
+        "item": "正方體長方體體積公式解應用題",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5M2",
+            "contains": "正方體長方體體積公式解應用題"
+          },
+          {
+            "type": "level_name",
+            "code": "5M2",
+            "contains": "長方體體積"
+          }
+        ]
+      },
+      {
+        "item": "求由正方體長方體拼砌的簡單立體體積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5M2",
+            "contains": "求由正方體長方體拼砌的簡單立體體積"
+          },
+          {
+            "type": "level_name",
+            "code": "5M2",
+            "contains": "拼砌立體體積"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'vol_composite'"
+          }
+        ]
+      },
+      {
+        "item": "量度前先估計",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5M2",
+            "contains": "量度前先估計"
+          },
+          {
+            "type": "level_name",
+            "code": "5M2",
+            "contains": "量度前先估計"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'measure_est'"
+          }
+        ]
+      }
+    ],
+    "5S1": [
+      {
+        "item": "圓心半徑直徑圓周概念",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S1",
+            "contains": "圓心半徑直徑圓周概念"
+          },
+          {
+            "type": "edb_scope",
+            "code": "5S1",
+            "contains": "圓心半徑直徑"
+          }
+        ]
+      },
+      {
+        "item": "圓上各點距圓心相同",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S1",
+            "contains": "圓上各點距圓心相同"
+          }
+        ]
+      },
+      {
+        "item": "經圓心線段最長",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S1",
+            "contains": "經圓心線段最長"
+          },
+          {
+            "type": "level_name",
+            "code": "5S1",
+            "contains": "經圓心最長"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'circle_diameter_max'"
+          }
+        ]
+      },
+      {
+        "item": "直徑=半徑2倍",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S1",
+            "contains": "直徑=半徑2倍"
+          },
+          {
+            "type": "visual",
+            "unit": 24,
+            "contains": "直徑 = 半徑 × 2"
+          }
+        ]
+      },
+      {
+        "item": "用圓規畫指定半徑或直徑的圓",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S1",
+            "contains": "用圓規畫指定半徑或直徑的圓"
+          },
+          {
+            "type": "visual",
+            "unit": 24,
+            "contains": "data-ad-interactive=\"compass-circle\""
+          }
+        ]
+      }
+    ],
+    "5S2": [
+      {
+        "item": "平行於角柱圓柱底的截面形狀大小與底相同",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S2",
+            "contains": "平行於角柱圓柱底的截面形狀大小與底相同"
+          },
+          {
+            "type": "visual",
+            "unit": 25,
+            "contains": "data-ad-interactive=\"cross-section\""
+          }
+        ]
+      },
+      {
+        "item": "認識頂點和稜概念",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S2",
+            "contains": "認識頂點和稜概念"
+          },
+          {
+            "type": "level_name",
+            "code": "5S2",
+            "contains": "認識頂點稜面"
+          }
+        ]
+      },
+      {
+        "item": "製作正方體長方體支架及摺紙圖樣",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S2",
+            "contains": "製作正方體長方體支架及摺紙圖樣"
+          },
+          {
+            "type": "level_name",
+            "code": "5S2",
+            "contains": "支架與摺紙圖樣"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'solid_net'"
+          }
+        ]
+      },
+      {
+        "item": "球上各點距球心相同、球的截面都是圓",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5S2",
+            "contains": "球上各點距球心相同、球的截面都是圓"
+          },
+          {
+            "type": "level_name",
+            "code": "5S2",
+            "contains": "球的性質"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'sphere_props'"
+          }
+        ]
+      }
+    ],
+    "5D1": [
+      {
+        "item": "一格代表1000/10000/100000單位",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5D1",
+            "contains": "一格代表1000/10000/100000單位"
+          },
+          {
+            "type": "level_name",
+            "code": "5D1",
+            "contains": "大數刻度"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'chart_scale'"
+          }
+        ]
+      },
+      {
+        "item": "橫向和縱向複合棒形圖",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5D1",
+            "contains": "橫向和縱向複合棒形圖"
+          }
+        ]
+      },
+      {
+        "item": "四捨五入湊整",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "5D1",
+            "contains": "四捨五入湊整"
+          },
+          {
+            "type": "level_name",
+            "code": "5D1",
+            "contains": "四捨五入湊整"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'round_to'"
+          }
+        ]
+      }
+    ],
+    "6N1": [
+      {
+        "item": "小數÷整數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N1",
+            "contains": "小數÷整數"
+          },
+          {
+            "type": "level_name",
+            "code": "6N1",
+            "contains": "小數÷整數"
+          }
+        ]
+      },
+      {
+        "item": "整數÷整數（商為小數）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N1",
+            "contains": "整數÷整數（商為小數）"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'ddiv_intdec'"
+          }
+        ]
+      },
+      {
+        "item": "整數÷小數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N1",
+            "contains": "整數÷小數"
+          },
+          {
+            "type": "level_name",
+            "code": "6N1",
+            "contains": "整數÷小數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'ddiv_by_dec'"
+          }
+        ]
+      },
+      {
+        "item": "小數÷小數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N1",
+            "contains": "小數÷小數"
+          },
+          {
+            "type": "level_name",
+            "code": "6N1",
+            "contains": "小數÷小數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'ddivdec'"
+          }
+        ]
+      },
+      {
+        "item": "調整除數至整數後被除數不多於三位、除數不多於兩位",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N1",
+            "contains": "調整除數至整數後被除數不多於三位、除數不多於兩位"
+          },
+          {
+            "type": "concept",
+            "unit": 27,
+            "contains": "先把除數變整數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'ddivdec'"
+          }
+        ]
+      },
+      {
+        "item": "小數除應用題",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N1",
+            "contains": "小數除應用題"
+          },
+          {
+            "type": "level_name",
+            "code": "6N1",
+            "contains": "小數除應用題"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'ddiv_word'"
+          }
+        ]
+      }
+    ],
+    "6N2": [
+      {
+        "item": "小數化成分母為10/100/1000的分數並約至最簡",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N2",
+            "contains": "小數化成分母為10/100/1000的分數並約至最簡"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'dec_frac'"
+          }
+        ]
+      },
+      {
+        "item": "分子除以分母化小數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N2",
+            "contains": "分子除以分母化小數"
+          },
+          {
+            "type": "concept",
+            "unit": 28,
+            "contains": "分子 ÷ 分母"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'frac_dec'"
+          }
+        ]
+      },
+      {
+        "item": "擴分法化小數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N2",
+            "contains": "擴分法化小數"
+          },
+          {
+            "type": "level_name",
+            "code": "6N2",
+            "contains": "擴分法化小數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'frac_dec_expand'"
+          },
+          {
+            "type": "concept",
+            "unit": 28,
+            "contains": "擴分法"
+          }
+        ]
+      },
+      {
+        "item": "靈活運用不同方法比較分數大小",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N2",
+            "contains": "靈活運用不同方法比較分數大小"
+          },
+          {
+            "type": "level_name",
+            "code": "6N2",
+            "contains": "比較分數大小"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'frac_compare'"
+          },
+          {
+            "type": "concept",
+            "unit": 28,
+            "contains": "通分"
+          }
+        ]
+      }
+    ],
+    "6N3": [
+      {
+        "item": "百分數表示兩同類量關係、分母為100",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N3",
+            "contains": "百分數表示兩同類量關係、分母為100"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'pct_frac'"
+          }
+        ]
+      },
+      {
+        "item": "100%=1及表示全部",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N3",
+            "contains": "100%=1及表示全部"
+          }
+        ]
+      },
+      {
+        "item": "百分數化分數須最簡",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N3",
+            "contains": "百分數化分數須最簡"
+          },
+          {
+            "type": "level_name",
+            "code": "6N3",
+            "contains": "百分數化分數"
+          }
+        ]
+      },
+      {
+        "item": "速算法如移動小數點互化",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N3",
+            "contains": "速算法如移動小數點互化"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'pct_dec'"
+          }
+        ]
+      }
+    ],
+    "6N4": [
+      {
+        "item": "求30是50的百分之幾",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N4",
+            "contains": "求30是50的百分之幾"
+          },
+          {
+            "type": "visual",
+            "unit": 30,
+            "contains": "30是50的%"
+          }
+        ]
+      },
+      {
+        "item": "50的60%是多少",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N4",
+            "contains": "50的60%是多少"
+          },
+          {
+            "type": "visual",
+            "unit": 30,
+            "contains": "50的60%"
+          }
+        ]
+      },
+      {
+        "item": "50增加10%後是多少",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N4",
+            "contains": "50增加10%後是多少"
+          },
+          {
+            "type": "visual",
+            "unit": 30,
+            "contains": "50增10%"
+          }
+        ]
+      },
+      {
+        "item": "50減少10%後是多少",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6N4",
+            "contains": "50減少10%後是多少"
+          },
+          {
+            "type": "visual",
+            "unit": 30,
+            "contains": "50減10%"
+          }
+        ]
+      }
+    ],
+    "6A1": [
+      {
+        "item": "六類方程：ax+b=c、ax−b=c、a(x+b)=c、a(x−b)=c、dx+ex=c、dx−ex=c(d≠e)",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6A1",
+            "contains": "六類方程：ax+b=c、ax−b=c、a(x+b)=c、a(x−b)=c、dx+ex=c、dx−ex=c(d≠e)"
+          },
+          {
+            "type": "level_name",
+            "code": "6A1",
+            "contains": "括號方程"
+          },
+          {
+            "type": "compute",
+            "contains": "ty2 === 'dx+ex'"
+          },
+          {
+            "type": "compute",
+            "contains": "'a(x+b)'"
+          }
+        ]
+      },
+      {
+        "item": "a,b,c可為整數/分數/小數/百分數，d,e為整數，a,d,e≠0",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6A1",
+            "contains": "a,b,c可為整數/分數/小數/百分數，d,e為整數，a,d,e≠0"
+          },
+          {
+            "type": "level_name",
+            "code": "6A1",
+            "contains": "分數小數百分數係數"
+          },
+          {
+            "type": "compute",
+            "contains": "spec.coeff === 'mixed'"
+          },
+          {
+            "type": "compute",
+            "contains": "coeffMode === 'frac'"
+          }
+        ]
+      },
+      {
+        "item": "同類項只在等號其中一邊",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6A1",
+            "contains": "同類項只在等號其中一邊"
+          },
+          {
+            "type": "concept",
+            "unit": 31,
+            "contains": "合併同類項"
+          },
+          {
+            "type": "compute",
+            "contains": "合併同類項："
+          }
+        ]
+      },
+      {
+        "item": "以天平或模型解釋",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6A1",
+            "contains": "以天平或模型解釋"
+          },
+          {
+            "type": "visual",
+            "unit": 31,
+            "contains": "data-ad-interactive=\"balance-solver\""
+          },
+          {
+            "type": "concept",
+            "unit": 31,
+            "contains": "用天平擺出"
+          }
+        ]
+      },
+      {
+        "item": "解後驗算",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6A1",
+            "contains": "解後驗算"
+          },
+          {
+            "type": "edb_scope",
+            "code": "6A1",
+            "contains": "驗算"
+          }
+        ]
+      },
+      {
+        "item": "從周界面積求邊長、根據百分數或分數求原本的數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6A1",
+            "contains": "從周界面積求邊長、根據百分數或分數求原本的數"
+          },
+          {
+            "type": "level_name",
+            "code": "6A1",
+            "contains": "方程應用題"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'eq_reverse_word'"
+          }
+        ]
+      }
+    ],
+    "6M1": [
+      {
+        "item": "用量角器量度360°以內的角",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M1",
+            "contains": "用量角器量度360°以內的角"
+          },
+          {
+            "type": "visual",
+            "unit": 32,
+            "contains": "protractorReadNextBtn"
+          }
+        ]
+      },
+      {
+        "item": "認識反角平角周角",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M1",
+            "contains": "認識反角平角周角"
+          },
+          {
+            "type": "level_name",
+            "code": "6M1",
+            "contains": "反角"
+          }
+        ]
+      },
+      {
+        "item": "用符號∠命名角",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M1",
+            "contains": "用符號∠命名角"
+          },
+          {
+            "type": "level_name",
+            "code": "6M1",
+            "contains": "∠命名角"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'angle_name'"
+          },
+          {
+            "type": "concept",
+            "unit": 32,
+            "contains": "∠"
+          }
+        ]
+      },
+      {
+        "item": "用量角器繪畫360°以內的角",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M1",
+            "contains": "用量角器繪畫360°以內的角"
+          },
+          {
+            "type": "visual",
+            "unit": 32,
+            "contains": "data-ad-interactive=\"protractor-draw\""
+          }
+        ]
+      },
+      {
+        "item": "量度前先估計",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M1",
+            "contains": "量度前先估計"
+          },
+          {
+            "type": "level_name",
+            "code": "6M1",
+            "contains": "量度前先估計"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'measure_est'"
+          }
+        ]
+      }
+    ],
+    "6M2": [
+      {
+        "item": "1立方厘米=1毫升、1立方米=1000升",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M2",
+            "contains": "1立方厘米=1毫升、1立方米=1000升"
+          },
+          {
+            "type": "visual",
+            "unit": 33,
+            "contains": "1 立方厘米 = 1 毫升"
+          }
+        ]
+      },
+      {
+        "item": "m³/cm³/L/mL皆為液體體積及容量單位",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M2",
+            "contains": "m³/cm³/L/mL皆為液體體積及容量單位"
+          },
+          {
+            "type": "level_name",
+            "code": "6M2",
+            "contains": "液體體積單位"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'vol_cap_units'"
+          }
+        ]
+      },
+      {
+        "item": "用水缸量杯排水桶求不規則立體體積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M2",
+            "contains": "用水缸量杯排水桶求不規則立體體積"
+          },
+          {
+            "type": "visual",
+            "unit": 33,
+            "contains": "data-ad-interactive=\"water-displacement\""
+          }
+        ]
+      }
+    ],
+    "6M3": [
+      {
+        "item": "用22/7或3.14作π近似值",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M3",
+            "contains": "用22/7或3.14作π近似值"
+          },
+          {
+            "type": "compute",
+            "contains": "π 取 3.14"
+          }
+        ]
+      },
+      {
+        "item": "求圓/半圓/四分一圓及拼砌圖形周界",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M3",
+            "contains": "求圓/半圓/四分一圓及拼砌圖形周界"
+          },
+          {
+            "type": "visual",
+            "unit": 34,
+            "contains": "data-ad-interactive=\"circle-measure\""
+          }
+        ]
+      },
+      {
+        "item": "從圓周求直徑和半徑",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M3",
+            "contains": "從圓周求直徑和半徑"
+          }
+        ]
+      }
+    ],
+    "6M4": [
+      {
+        "item": "時間化聚只涉單名數（時分、分秒之間）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M4",
+            "contains": "時間化聚只涉單名數（時分、分秒之間）"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'time_convert'"
+          }
+        ]
+      },
+      {
+        "item": "從開始/結束/間隔三者任兩者求未知量",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M4",
+            "contains": "從開始/結束/間隔三者任兩者求未知量"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'time_interval'"
+          }
+        ]
+      },
+      {
+        "item": "每段間隔可同涉時和分",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M4",
+            "contains": "每段間隔可同涉時和分"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'time_interval_hm'"
+          }
+        ]
+      },
+      {
+        "item": "認識m/s和km/h",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M4",
+            "contains": "認識m/s和km/h"
+          },
+          {
+            "type": "visual",
+            "unit": 35,
+            "contains": "km/h"
+          }
+        ]
+      },
+      {
+        "item": "闡釋行程圖解應用題",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M4",
+            "contains": "闡釋行程圖解應用題"
+          },
+          {
+            "type": "visual",
+            "unit": 35,
+            "contains": "data-ad-interactive=\"travel-graph\""
+          }
+        ]
+      }
+    ],
+    "6M5": [
+      {
+        "item": "用22/7或3.14作π近似值",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M5",
+            "contains": "用22/7或3.14作π近似值"
+          }
+        ]
+      },
+      {
+        "item": "求四分一圓/半圓/四分三圓面積",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M5",
+            "contains": "求四分一圓/半圓/四分三圓面積"
+          },
+          {
+            "type": "visual",
+            "unit": 36,
+            "contains": "data-ad-interactive=\"circle-area\""
+          }
+        ]
+      },
+      {
+        "item": "認識古代中國數學家求圓周率成就（劉徽、祖沖之）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6M5",
+            "contains": "認識古代中國數學家求圓周率成就（劉徽、祖沖之）"
+          },
+          {
+            "type": "visual",
+            "unit": 36,
+            "contains": "祖沖之"
+          }
+        ]
+      }
+    ],
+    "6S1": [
+      {
+        "item": "找對稱軸",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6S1",
+            "contains": "找對稱軸"
+          },
+          {
+            "type": "level_name",
+            "code": "6S1",
+            "contains": "找對稱軸"
+          }
+        ]
+      },
+      {
+        "item": "認識正方形/長方形/等腰三角形/等邊三角形/菱形/圓是軸對稱",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6S1",
+            "contains": "認識正方形/長方形/等腰三角形/等邊三角形/菱形/圓是軸對稱"
+          },
+          {
+            "type": "level_name",
+            "code": "6S1",
+            "contains": "軸對稱圖形"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'symmetry_shapes'"
+          }
+        ]
+      },
+      {
+        "item": "沿對稱軸對摺認識完全重合",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6S1",
+            "contains": "沿對稱軸對摺認識完全重合"
+          },
+          {
+            "type": "visual",
+            "unit": 37,
+            "contains": "完全重合"
+          },
+          {
+            "type": "concept",
+            "unit": 37,
+            "contains": "完全重合"
+          }
+        ]
+      },
+      {
+        "item": "在方格紙繪畫及剪紙製作",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6S1",
+            "contains": "在方格紙繪畫及剪紙製作"
+          },
+          {
+            "type": "level_name",
+            "code": "6S1",
+            "contains": "方格紙剪紙"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'symmetry_grid'"
+          }
+        ]
+      },
+      {
+        "item": "給一半時沿對稱軸畫另一半",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6S1",
+            "contains": "給一半時沿對稱軸畫另一半"
+          },
+          {
+            "type": "visual",
+            "unit": 37,
+            "contains": "data-ad-interactive=\"symmetry-draw\""
+          }
+        ]
+      }
+    ],
+    "6D1": [
+      {
+        "item": "平均數亦稱平均值",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D1",
+            "contains": "平均數亦稱平均值"
+          },
+          {
+            "type": "compute",
+            "contains": "又叫平均值"
+          }
+        ]
+      },
+      {
+        "item": "估計統計圖中數據的平均數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D1",
+            "contains": "估計統計圖中數據的平均數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'average_estimate'"
+          }
+        ]
+      },
+      {
+        "item": "從平均值求一組數據中一個未知的數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D1",
+            "contains": "從平均值求一組數據中一個未知的數"
+          }
+        ]
+      }
+    ],
+    "6D2": [
+      {
+        "item": "認識折線圖與棒形圖異同",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D2",
+            "contains": "認識折線圖與棒形圖異同"
+          },
+          {
+            "type": "edb_scope",
+            "code": "6D2",
+            "contains": "認識折線圖"
+          },
+          {
+            "type": "level_name",
+            "code": "6D2",
+            "contains": "認識折線圖"
+          }
+        ]
+      },
+      {
+        "item": "折線圖能清楚顯示增減變化",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D2",
+            "contains": "折線圖能清楚顯示增減變化"
+          },
+          {
+            "type": "concept",
+            "unit": 39,
+            "contains": "上升表示增加、下降表示減少"
+          },
+          {
+            "type": "visual",
+            "unit": 39,
+            "contains": "線向上＝升"
+          }
+        ]
+      },
+      {
+        "item": "製作折線圖",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D2",
+            "contains": "製作折線圖"
+          },
+          {
+            "type": "level_name",
+            "code": "6D2",
+            "contains": "製作折線圖"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'line_chart_make'"
+          }
+        ]
+      }
+    ],
+    "6D3": [
+      {
+        "item": "闡釋涉及簡單計算的圓形圖",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D3",
+            "contains": "闡釋涉及簡單計算的圓形圖"
+          }
+        ]
+      },
+      {
+        "item": "以圓心角標示時每扇形圓心角為30°或45°的倍數",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D3",
+            "contains": "以圓心角標示時每扇形圓心角為30°或45°的倍數"
+          },
+          {
+            "type": "compute",
+            "contains": "kind === 'pie_central_angle'"
+          }
+        ]
+      },
+      {
+        "item": "闡釋以百分數標示的圓形圖（簡單計算）",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D3",
+            "contains": "闡釋以百分數標示的圓形圖（簡單計算）"
+          },
+          {
+            "type": "visual",
+            "unit": 40,
+            "contains": "100%"
+          }
+        ]
+      }
+    ],
+    "6D4": [
+      {
+        "item": "從象形圖/棒形圖/折線圖/圓形圖選合適統計圖",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D4",
+            "contains": "從象形圖/棒形圖/折線圖/圓形圖選合適統計圖"
+          },
+          {
+            "type": "visual",
+            "unit": 41,
+            "contains": "比較用棒形圖"
+          }
+        ]
+      },
+      {
+        "item": "認識不同縱軸比例影響觀感",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D4",
+            "contains": "認識不同縱軸比例影響觀感"
+          },
+          {
+            "type": "visual",
+            "unit": 41,
+            "contains": "縱軸要由 0 開始"
+          }
+        ]
+      },
+      {
+        "item": "培養嚴謹處理數據態度",
+        "status": "covered",
+        "evidence": [
+          {
+            "type": "edb_scope",
+            "code": "6D4",
+            "contains": "培養嚴謹處理數據態度"
+          },
+          {
+            "type": "edb_scope",
+            "code": "6D4",
+            "contains": "嚴謹處理數據"
+          }
+        ]
+      }
+    ]
+  }
+}

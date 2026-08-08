@@ -2,15 +2,20 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>私隱政策 — Sobo Math</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:-apple-system,'PingFang HK','Noto Sans HK','Helvetica Neue',sans-serif;
   background:#f8faf8;color:#1a2e1a;line-height:1.8;padding:0;}
-.topbar{position:sticky;top:0;z-index:10;background:#143a57;padding:14px 16px;
-  display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.topbar a{color:#fff;text-decoration:none;font-size:0.88rem;font-weight:700;}
+.topbar{position:sticky;top:0;z-index:10;background:#143a57;padding:calc(14px + env(safe-area-inset-top, 0px)) 16px 14px;
+  display:flex;align-items:center;gap:10px;}
+.back-btn{background:#5bb0e5;border:none;border-radius:16px;color:#fff;
+  font-size:0.9rem;font-weight:700;padding:6px 14px;cursor:pointer;font-family:inherit;}
 .topbar-title{color:#fff;font-size:1rem;font-weight:700;}
 .container{max-width:680px;margin:0 auto;padding:20px 20px 60px;}
 h1{font-size:1.5rem;font-weight:800;color:#143a57;margin-bottom:4px;}
@@ -23,93 +28,98 @@ li{margin-bottom:4px;}
 a{color:#5bb0e5;}
 .footer{margin-top:36px;padding-top:16px;border-top:1px solid #ddd;font-size:0.75rem;color:#999;text-align:center;}
 </style>
+<script src="i18n.js?v=30b676ac"></script>
 </head>
 <body>
 <div class="topbar">
-  <a href="index.html">← 首頁</a>
-  <span class="topbar-title">私隱政策</span>
-  <a href="support.html">支援</a>
+  <button class="back-btn" onclick="location.href='index.html'" data-zh="← 返回" data-sc="← 返回" data-en="← Back">← 返回</button>
+  <span class="topbar-title" data-zh="私隱政策" data-sc="隐私政策" data-en="Privacy policy">私隱政策</span>
 </div>
 <div class="container">
 
-<h1>私隱政策</h1>
-<div class="app-name">Sobo Math｜香港小四至小六 EDB 數學練習</div>
-<div class="update-date">最後更新：2026 年 7 月 6 日</div>
+<h1 data-zh="私隱政策" data-sc="隐私政策" data-en="Privacy policy">私隱政策</h1>
+<div class="app-name" data-zh="Sobo Math · 香港小四至小六 EDB 數學練習" data-sc="Sobo Math · 香港小四至小六 EDB 数学练习" data-en="Sobo Math · Hong Kong P4–P6 EDB maths practice">Sobo Math · 香港小四至小六 EDB 數學練習</div>
+<div class="update-date" data-zh="最後更新：2026 年 8 月 8 日" data-sc="最后更新：2026 年 8 月 8 日" data-en="Last updated: 8 August 2026">最後更新：2026 年 8 月 8 日</div>
 
-<p>Ryan Yeung Studio（以下簡稱「我們」）非常重視您和您孩子的私隱。本私隱政策說明我們的應用程式「Sobo Math」如何收集、使用和保護您的資料。</p>
+<p data-zh="Ryan Yeung Studio（以下簡稱「我們」）非常重視您和您孩子的私隱。本私隱政策說明我們的應用程式「Sobo Math」如何收集、使用和保護您的資料。" data-sc="Ryan Yeung Studio（以下简称「我们」）非常重视您和您孩子的隐私。本隐私政策说明我们的应用程序「Sobo Math」如何收集、使用和保护您的资料。" data-en="Ryan Yeung Studio (“we”, “us”) takes your privacy and your child’s privacy seriously. This Privacy Policy explains how our app “Sobo Math” collects, uses, and protects your information.">Ryan Yeung Studio（以下簡稱「我們」）非常重視您和您孩子的私隱。本私隱政策說明我們的應用程式「Sobo Math」如何收集、使用和保護您的資料。</p>
 
-<h2>1. 資料收集</h2>
-<p>我們的應用程式<strong>不會收集或上傳任何個人身份資料</strong>。具體而言：</p>
+<h2 data-zh="1. 資料收集" data-sc="1. 资料收集" data-en="1. Data we collect">1. 資料收集</h2>
+<p data-zh-html="我們的應用程式<strong>不會收集或上傳任何個人身份資料</strong>。具體而言：" data-sc-html="我们的应用程序<strong>不会收集或上传任何个人身份资料</strong>。具体而言：" data-en-html="Our app <strong>does not collect or upload any personally identifiable information</strong>. In particular:">我們的應用程式<strong>不會收集或上傳任何個人身份資料</strong>。具體而言：</p>
 <ul>
-  <li>我們不要求註冊帳號或登入</li>
-  <li>我們不收集電郵地址、電話號碼或其他聯絡資料</li>
-  <li>我們不收集位置資料</li>
-  <li>我們不使用任何第三方分析、追蹤工具或外部字體/內容伺服器</li>
-  <li>應用程式內所有頁面均為本機檔案，日常使用<strong>無需網絡連線</strong></li>
+  <li data-zh="我們不要求註冊帳號或登入" data-sc="我们不要求注册账号或登录" data-en="We do not require account registration or sign-in">我們不要求註冊帳號或登入</li>
+  <li data-zh="我們不收集電郵地址、電話號碼或其他聯絡資料" data-sc="我们不收集电邮地址、电话号码或其他联络资料" data-en="We do not collect email addresses, phone numbers, or other contact details">我們不收集電郵地址、電話號碼或其他聯絡資料</li>
+  <li data-zh="我們不收集位置資料" data-sc="我们不收集位置资料" data-en="We do not collect location data">我們不收集位置資料</li>
+  <li data-zh="我們不使用任何第三方分析、追蹤工具或外部字體/內容伺服器" data-sc="我们不使用任何第三方分析、追踪工具或外部字体/内容服务器" data-en="We do not use third-party analytics, tracking tools, or external font/content servers">我們不使用任何第三方分析、追蹤工具或外部字體/內容伺服器</li>
+  <li data-zh="核心課程均為本機檔案，可離線練習；訂閱價格、購買／恢復購買及家長主動開啟的外部連結需要網絡" data-sc="核心课程均为本机档案，可离线练习；订阅价格、购买／恢复购买及家长主动开启的外部连结需要网络" data-en="Core lessons are local files and can be practised offline; subscription pricing, purchase / restore, and external links opened by a parent need a network connection">核心課程均為本機檔案，可離線練習；訂閱價格、購買／恢復購買及家長主動開啟的外部連結需要網絡</li>
 </ul>
 
-<h2>2. 本機儲存資料</h2>
-<p>應用程式會在您的裝置上本機儲存以下資料，這些資料<strong>不會自動傳送到任何伺服器</strong>：</p>
+<h2 data-zh="2. 本機儲存資料" data-sc="2. 本机储存资料" data-en="2. Data stored on your device">2. 本機儲存資料</h2>
+<p data-zh-html="應用程式會在您的裝置上本機儲存以下資料。正式版本不設學習資料同步端點；除非家長主動使用匯出、複製或分享功能，這些資料<strong>不會離開裝置</strong>：" data-sc-html="应用程序会在您的装置上本机储存以下资料。正式版本不设学习资料同步端点；除非家长主动使用导出、复制或分享功能，这些资料<strong>不会离开装置</strong>：" data-en-html="The app stores the following data locally on your device. The production app has no learning-data sync endpoint; unless a parent deliberately uses export, copy, or share, this data <strong>does not leave the device</strong>:">應用程式會在您的裝置上本機儲存以下資料。正式版本不設學習資料同步端點；除非家長主動使用匯出、複製或分享功能，這些資料<strong>不會離開裝置</strong>：</p>
 <ul>
-  <li>學習進度和成績（單元完成狀態、測驗分數、星級、技能掌握度估算）</li>
-  <li><strong>暱稱（可選）</strong>：孩子可自訂一個顯示名稱（如「小書俠」），僅儲存在裝置上，用於學習報告抬頭；可隨時更改，不會離開裝置</li>
-  <li><strong>匿名學習事件紀錄</strong>：答題、通關等事件（不含姓名或聯絡資料），僅儲存在裝置上，供「家長報告」分析弱項；家長可在報告頁自行匯出 JSON 備份或複製分享——匯出與分享完全由您主動操作</li>
-  <li>數寶養成進度（數寶等級、數寶經驗）</li>
-  <li>語言偏好設定（繁體/簡體、廣東話/普通話語音）</li>
-  <li>每日簽到和遊戲次數記錄</li>
+  <li data-zh="學習進度和成績（單元完成狀態、測驗分數、星級、技能掌握度估算）" data-sc="学习进度和成绩（单元完成状态、测验分数、星级、技能掌握度估算）" data-en="Learning progress and scores (unit completion, quiz scores, stars, estimated skill mastery)">學習進度和成績（單元完成狀態、測驗分數、星級、技能掌握度估算）</li>
+  <li data-zh-html="<strong>暱稱（可選）</strong>：孩子可自訂一個顯示名稱（如「小書俠」），僅儲存在裝置上，用於學習報告抬頭；可隨時更改，不會離開裝置" data-sc-html="<strong>昵称（可选）</strong>：孩子可自订一个显示名称（如「小书侠」），仅储存在装置上，用于学习报告抬头；可随时更改，不会离开装置" data-en-html="<strong>Nickname (optional)</strong>: a child may set a display name (e.g. “Little Scholar”), stored only on the device for report headings; it can be changed any time and does not leave the device"><strong>暱稱（可選）</strong>：孩子可自訂一個顯示名稱（如「小書俠」），僅儲存在裝置上，用於學習報告抬頭；可隨時更改，不會離開裝置</li>
+  <li data-zh-html="<strong>匿名學習事件紀錄</strong>：答題、通關等事件（不含姓名或聯絡資料），僅儲存在裝置上，供「家長報告」分析弱項；家長可在報告頁自行匯出 JSON 備份或複製分享——匯出與分享完全由您主動操作" data-sc-html="<strong>匿名学习事件纪录</strong>：答题、通关等事件（不含姓名或联络资料），仅储存在装置上，供「家长报告」分析弱项；家长可在报告页自行导出 JSON 备份或复制分享——导出与分享完全由您主动操作" data-en-html="<strong>Anonymous learning event log</strong>: answers, stage clears, and similar events (no name or contact details), stored only on the device for Parent Report weak-spot analysis; parents may export a JSON backup or copy to share from the report page — export and sharing happen only when you choose"><strong>匿名學習事件紀錄</strong>：答題、通關等事件（不含姓名或聯絡資料），僅儲存在裝置上，供「家長報告」分析弱項；家長可在報告頁自行匯出 JSON 備份或複製分享——匯出與分享完全由您主動操作</li>
+  <li data-zh="數寶養成進度（數寶等級、數寶經驗）" data-sc="数宝养成进度（数宝等级、数宝经验）" data-en="Sobo pet progress (level and experience)">數寶養成進度（數寶等級、數寶經驗）</li>
+  <li data-zh="語言偏好設定（繁體／簡體／英文；廣東話／普通話／英語語音）" data-sc="语言偏好设定（繁体／简体／英文；广东话／普通话／英语语音）" data-en="Language preferences (Traditional Chinese / Simplified Chinese / English; Cantonese / Putonghua / English speech)">語言偏好設定（繁體／簡體／英文；廣東話／普通話／英語語音）</li>
+  <li data-zh="每日簽到和遊戲次數記錄" data-sc="每日签到和游戏次数记录" data-en="Daily check-in and play-count records">每日簽到和遊戲次數記錄</li>
 </ul>
 
-<h2>3. 兒童私隱</h2>
-<p>本應用程式專為小學四年級至六年級學生設計（約 9-12 歲）。我們嚴格遵守兒童私隱保護：</p>
+<h2 data-zh="3. 兒童私隱" data-sc="3. 儿童隐私" data-en="3. Children’s privacy">3. 兒童私隱</h2>
+<p data-zh="本應用程式專為小學四年級至六年級學生設計（約 9-12 歲）。我們嚴格遵守兒童私隱保護：" data-sc="本应用程序专为小学四年级至六年级学生设计（约 9-12 岁）。我们严格遵守儿童隐私保护：" data-en="This app is designed for Primary 4 to Primary 6 students (about ages 9–12). We follow strict children’s privacy practices:">本應用程式專為小學四年級至六年級學生設計（約 9-12 歲）。我們嚴格遵守兒童私隱保護：</p>
 <ul>
-  <li>不收集任何兒童的個人資料</li>
-  <li>不包含第三方廣告</li>
-  <li>不包含社交功能或用戶間通訊</li>
-  <li>不會連結至外部社交媒體平台</li>
+  <li data-zh="不收集任何兒童的個人資料" data-sc="不收集任何儿童的个人资料" data-en="We do not collect any personal data about children">不收集任何兒童的個人資料</li>
+  <li data-zh="不包含第三方廣告" data-sc="不包含第三方广告" data-en="There are no third-party ads">不包含第三方廣告</li>
+  <li data-zh="本機排行榜及邀請碼只供家長手動比較學習進度；不設網上帳號、公開排名、即時通訊或伺服器配對，相關分享只可在家長驗證後操作" data-sc="本机排行榜及邀请码只供家长手动比较学习进度；不设网上账号、公开排名、即时通讯或服务器配对，相关分享只可在家长验证后操作" data-en="The on-device leaderboard and invite code are only for a parent to compare progress manually; there are no online accounts, public rankings, real-time messaging, or server matchmaking, and sharing is available only after parental verification">本機排行榜及邀請碼只供家長手動比較學習進度；不設網上帳號、公開排名、即時通訊或伺服器配對，相關分享只可在家長驗證後操作</li>
+  <li data-zh="不會連結至外部社交媒體平台" data-sc="不会连结至外部社交媒体平台" data-en="We do not link out to external social media platforms">不會連結至外部社交媒體平台</li>
 </ul>
 
-<h2>4. 訂閱服務</h2>
-<p>本應用程式提供自動續期訂閱服務（PRO）。免費版每日能量有限，可循序學完全部單元；PRO 付費後可跳關靈活學，並解鎖無限能量及較多功能：</p>
+<h2 data-zh="4. 訂閱服務" data-sc="4. 订阅服务" data-en="4. Subscriptions">4. 訂閱服務</h2>
+<p data-zh="本應用程式提供自動續期訂閱服務（PRO）。免費版每日能量有限，可循序學完全部單元；PRO 付費後可跳關靈活學，並解鎖無限能量及較多功能：" data-sc="本应用程序提供自动续期订阅服务（PRO）。免费版每日能量有限，可循序学完全部单元；PRO 付费后可跳关灵活学，并解锁无限能量及较多功能：" data-en="This app offers auto-renewing subscriptions (PRO). The free version has a daily energy limit and unlocks units in order; with PRO you can jump units freely, and unlock unlimited energy plus more features:">本應用程式提供自動續期訂閱服務（PRO）。免費版每日能量有限，可循序學完全部單元；PRO 付費後可跳關靈活學，並解鎖無限能量及較多功能：</p>
 <ul>
-  <li><strong>月費訂閱</strong>：價格以 App Store 購買畫面為準 · 按月自動續期</li>
-  <li><strong>年費訂閱</strong>：價格以 App Store 購買畫面為準 · 按年自動續期 · 合資格用戶或會獲免費試用（期限以 App Store 為準）</li>
+  <li data-zh-html="<strong>月費訂閱</strong>：按月自動續期" data-sc-html="<strong>月费订阅</strong>：按月自动续期" data-en-html="<strong>Monthly subscription</strong>: auto-renews each month"><strong>月費訂閱</strong>：按月自動續期</li>
+  <li data-zh-html="<strong>年費訂閱</strong>：按年自動續期" data-sc-html="<strong>年费订阅</strong>：按年自动续期" data-en-html="<strong>Yearly subscription</strong>: auto-renews each year"><strong>年費訂閱</strong>：按年自動續期</li>
 </ul>
-<p>訂閱相關事宜：</p>
+<p data-zh="訂閱相關事宜：" data-sc="订阅相关事宜：" data-en="About subscriptions:">訂閱相關事宜：</p>
 <ul>
-  <li>訂閱費用會從您的 Apple ID 帳戶中收取</li>
-  <li>訂閱會在當前週期結束前 24 小時內自動續費</li>
-  <li>您可以隨時在 iPhone/iPad 的「設定」→「Apple ID」→「訂閱項目」中管理或取消訂閱</li>
-  <li>取消訂閱後，您仍可使用服務至當前付費週期結束</li>
-  <li>免費試用期（如有）未使用部分將在購買訂閱時失效</li>
-</ul>
-
-<h2>5. 第三方服務</h2>
-<p>本應用程式使用的第三方服務<strong>僅限以下一項</strong>：</p>
-<ul>
-  <li><strong>Apple App Store</strong>：用於訂閱購買和付款處理。Apple 的私隱政策請參閱 <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
-</ul>
-<p>以下功能全部在裝置上本機進行，不涉及第三方：</p>
-<ul>
-  <li><strong>iOS 語音合成 (AVSpeechSynthesizer)</strong>：文字朗讀在裝置上處理</li>
-  <li><strong>字體</strong>：全部使用 iOS 系統字體，不從外部字體伺服器下載</li>
+  <li data-zh="訂閱費用會從您的 Apple ID 帳戶中收取" data-sc="订阅费用会从您的 Apple ID 帐户中收取" data-en="Subscription fees are charged to your Apple ID account">訂閱費用會從您的 Apple ID 帳戶中收取</li>
+  <li data-zh="訂閱會在當前週期結束前 24 小時內自動續費" data-sc="订阅会在当前周期结束前 24 小时内自动续费" data-en="Subscriptions renew automatically within 24 hours before the current period ends">訂閱會在當前週期結束前 24 小時內自動續費</li>
+  <li data-zh="您可以隨時在 iPhone/iPad 的「設定」→「Apple ID」→「訂閱項目」中管理或取消訂閱" data-sc="您可以随时在 iPhone/iPad 的「设定」→「Apple ID」→「订阅项目」中管理或取消订阅" data-en="You can manage or cancel any time in iPhone/iPad Settings → Apple ID → Subscriptions">您可以隨時在 iPhone/iPad 的「設定」→「Apple ID」→「訂閱項目」中管理或取消訂閱</li>
+  <li data-zh="取消訂閱後，您仍可使用服務至當前付費週期結束" data-sc="取消订阅后，您仍可使用服务至当前付费周期结束" data-en="After cancelling, you can keep using the service until the end of the current paid period">取消訂閱後，您仍可使用服務至當前付費週期結束</li>
+  <li data-zh="免費試用期（如有）未使用部分將在購買訂閱時失效" data-sc="免费试用期（如有）未使用部分将在购买订阅时失效" data-en="Any unused part of a free trial (if offered) is forfeited when you purchase a subscription">免費試用期（如有）未使用部分將在購買訂閱時失效</li>
 </ul>
 
-<h2>6. 資料安全</h2>
-<p>由於所有資料均儲存在您的裝置上，不會傳送至任何外部伺服器，因此您的資料安全取決於您的裝置安全設定。我們建議您為裝置設定密碼或生物辨識鎖定。</p>
-
-<h2>7. 政策變更</h2>
-<p>如本私隱政策有任何重大變更，我們將在應用程式內通知用戶。我們建議您定期查閱本政策。</p>
-
-<h2>8. 使用條款</h2>
-<p>本應用程式使用 Apple 標準使用條款 (EULA)：<br>
-<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
-
-<h2>9. 聯絡我們</h2>
-<p>如您對本私隱政策有任何疑問或建議，請透過以下方式聯絡我們：</p>
+<h2 data-zh="5. 第三方服務" data-sc="5. 第三方服务" data-en="5. Third-party services">5. 第三方服務</h2>
+<p data-zh-html="本應用程式使用的第三方服務<strong>僅限以下一項</strong>：" data-sc-html="本应用程序使用的第三方服务<strong>仅限以下一项</strong>：" data-en-html="The only third-party service this app uses is <strong>the following</strong>:">本應用程式使用的第三方服務<strong>僅限以下一項</strong>：</p>
 <ul>
-  <li>電郵：<a href="mailto:sisiyeung1126@icloud.com">sisiyeung1126@icloud.com</a></li>
-  <li>開發者：Ryan Yeung Studio</li>
-  <li>支援中心：<a href="support.html">support.html</a></li>
+  <li data-zh-html="<strong>Apple App Store</strong>：用於訂閱購買和付款處理。Apple 的私隱政策請參閱 apple.com/legal/privacy" data-sc-html="<strong>Apple App Store</strong>：用于订阅购买和付款处理。Apple 的隐私政策请参阅 apple.com/legal/privacy" data-en-html="<strong>Apple App Store</strong>: for subscription purchase and payment processing. See Apple’s privacy policy at apple.com/legal/privacy"><strong>Apple App Store</strong>：用於訂閱購買和付款處理。Apple 的私隱政策請參閱 apple.com/legal/privacy</li>
+</ul>
+<p data-zh="以下功能全部在裝置上本機進行，不涉及第三方：" data-sc="以下功能全部在装置上本机进行，不涉及第三方：" data-en="The following features run entirely on your device and do not involve third parties:">以下功能全部在裝置上本機進行，不涉及第三方：</p>
+<ul>
+  <li data-zh-html="<strong>iOS 語音合成 (AVSpeechSynthesizer)</strong>：文字朗讀在裝置上處理" data-sc-html="<strong>iOS 语音合成 (AVSpeechSynthesizer)</strong>：文字朗读在装置上处理" data-en-html="<strong>iOS speech synthesis (AVSpeechSynthesizer)</strong>: text-to-speech is handled on the device"><strong>iOS 語音合成 (AVSpeechSynthesizer)</strong>：文字朗讀在裝置上處理</li>
+  <li data-zh-html="<strong>字體</strong>：全部使用 iOS 系統字體，不從外部字體伺服器下載" data-sc-html="<strong>字体</strong>：全部使用 iOS 系统字体，不从外部字体服务器下载" data-en-html="<strong>Fonts</strong>: iOS system fonts only; nothing is downloaded from external font servers"><strong>字體</strong>：全部使用 iOS 系統字體，不從外部字體伺服器下載</li>
+</ul>
+
+<h2 data-zh="6. 資料安全" data-sc="6. 资料安全" data-en="6. Data security">6. 資料安全</h2>
+<p data-zh="學習資料預設只儲存在裝置；正式版本不設自動同步。家長主動匯出、複製或分享的資料會交由所選的系統功能或服務處理。請為裝置設定密碼或生物辨識鎖定，並只把報告分享給可信任的人。" data-sc="学习资料默认只储存在装置；正式版本不设自动同步。家长主动导出、复制或分享的资料会交由所选的系统功能或服务处理。请为装置设定密码或生物辨识锁定，并只把报告分享给可信任的人。" data-en="Learning data is stored on the device by default, and the production app has no automatic sync. Information a parent deliberately exports, copies, or shares is handled by the chosen system feature or service. Protect the device with a passcode or biometrics and share reports only with people you trust.">學習資料預設只儲存在裝置；正式版本不設自動同步。家長主動匯出、複製或分享的資料會交由所選的系統功能或服務處理。請為裝置設定密碼或生物辨識鎖定，並只把報告分享給可信任的人。</p>
+
+<h2 data-zh="7. 保留、刪除與選擇" data-sc="7. 保留、删除与选择" data-en="7. Retention, deletion, and your choices">7. 保留、刪除與選擇</h2>
+<p data-zh="本機學習資料會保留至家長在「設定 → 家長專區」清除資料，或從裝置刪除 App。清除後不能復原。您可隨時在設定中關閉提醒；由於正式版本不設學習資料同步，沒有伺服器帳戶或雲端學習紀錄需要另行刪除。如家長曾主動匯出或分享資料，請向接收該資料的服務或人士要求刪除。" data-sc="本机学习资料会保留至家长在「设定 → 家长专区」清除资料，或从装置删除 App。清除后不能复原。您可随时在设定中关闭提醒；由于正式版本不设学习资料同步，没有服务器账号或云端学习纪录需要另行删除。如家长曾主动导出或分享资料，请向接收该资料的服务或人士要求删除。" data-en="Local learning data is kept until a parent clears it under Settings → Parent area, or removes the app from the device. Clearing cannot be undone. Reminders can be turned off at any time. Because the production app has no learning-data sync, there is no server account or cloud learning record to delete separately. If a parent previously exported or shared information, ask the receiving service or person to delete that copy.">本機學習資料會保留至家長在「設定 → 家長專區」清除資料，或從裝置刪除 App。清除後不能復原。您可隨時在設定中關閉提醒；由於正式版本不設學習資料同步，沒有伺服器帳戶或雲端學習紀錄需要另行刪除。如家長曾主動匯出或分享資料，請向接收該資料的服務或人士要求刪除。</p>
+
+<h2 data-zh="8. 政策變更" data-sc="8. 政策变更" data-en="8. Changes to this policy">8. 政策變更</h2>
+<p data-zh="如本私隱政策有任何重大變更，我們將在應用程式內通知用戶。我們建議您定期查閱本政策。" data-sc="如本隐私政策有任何重大变更，我们将在应用程序内通知用户。我们建议您定期查阅本政策。" data-en="If we make material changes to this Privacy Policy, we will notify users in the app. We encourage you to review this policy from time to time.">如本私隱政策有任何重大變更，我們將在應用程式內通知用戶。我們建議您定期查閱本政策。</p>
+
+<h2 data-zh="9. 使用條款" data-sc="9. 使用条款" data-en="9. Terms of use">9. 使用條款</h2>
+<p data-zh-html="本應用程式使用 Apple 標準使用條款 (EULA)：<br>
+https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-sc-html="本应用程序使用 Apple 标准使用条款 (EULA)：<br>
+https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-en-html="This app uses Apple’s standard End User Licence Agreement (EULA):<br>
+https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">本應用程式使用 Apple 標準使用條款 (EULA)：<br>
+https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</p>
+
+<h2 data-zh="10. 聯絡我們" data-sc="10. 联络我们" data-en="10. Contact us">10. 聯絡我們</h2>
+<p data-zh="如您對本私隱政策有任何疑問或建議，請透過以下方式聯絡我們：" data-sc="如您对本隐私政策有任何疑问或建议，请透过以下方式联络我们：" data-en="If you have questions or suggestions about this Privacy Policy, please contact us:">如您對本私隱政策有任何疑問或建議，請透過以下方式聯絡我們：</p>
+<ul>
+  <li data-zh="電郵：sisiyeung1126@icloud.com" data-sc="电邮：sisiyeung1126@icloud.com" data-en="Email: sisiyeung1126@icloud.com">電郵：sisiyeung1126@icloud.com</li>
+  <li data-zh="開發者：Ryan Yeung Studio" data-sc="开发者：Ryan Yeung Studio" data-en="Developer: Ryan Yeung Studio">開發者：Ryan Yeung Studio</li>
 </ul>
 
 <div class="footer">
@@ -117,5 +127,15 @@ a{color:#5bb0e5;}
 </div>
 
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.HKCi18n && HKCi18n.applyI18n) HKCi18n.applyI18n();
+  try {
+    var lang = HKCi18n && HKCi18n.getLang ? HKCi18n.getLang() : 'tc';
+    if (lang === 'en') document.title = 'Privacy policy — Sobo Math';
+    else if (lang === 'sc') document.title = '隐私政策 — Sobo Math';
+  } catch (e) {}
+});
+</script>
 </body>
 </html>

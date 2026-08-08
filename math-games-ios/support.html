@@ -2,15 +2,20 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>支援中心 — Sobo Math</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:-apple-system,'PingFang HK','Noto Sans HK','Helvetica Neue',sans-serif;
   background:#f8faf8;color:#1a2e1a;line-height:1.8;padding:0;}
-.topbar{position:sticky;top:0;z-index:10;background:#143a57;padding:14px 16px;
-  display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.topbar a{color:#fff;text-decoration:none;font-size:0.88rem;font-weight:700;}
+.topbar{position:sticky;top:0;z-index:10;background:#143a57;padding:calc(14px + env(safe-area-inset-top, 0px)) 16px 14px;
+  display:flex;align-items:center;gap:10px;}
+.back-btn{background:#5bb0e5;border:none;border-radius:16px;color:#fff;
+  font-size:0.9rem;font-weight:700;padding:6px 14px;cursor:pointer;font-family:inherit;}
 .topbar-title{color:#fff;font-size:1rem;font-weight:700;}
 .container{max-width:680px;margin:0 auto;padding:20px 20px 60px;}
 h1{font-size:1.5rem;font-weight:800;color:#143a57;margin-bottom:4px;}
@@ -20,6 +25,7 @@ p,li{font-size:0.88rem;color:#333;margin-bottom:8px;}
 ul{padding-left:18px;margin-bottom:12px;}
 li{margin-bottom:6px;}
 a{color:#5bb0e5;}
+.legal-link{border:0;background:none;color:#2f7fbf;text-decoration:underline;font:inherit;font-weight:700;padding:4px;cursor:pointer;}
 .contact-card{background:#e8f5e9;border-radius:16px;padding:20px;margin:16px 0;border:1px solid #c8e6c9;}
 .contact-card h3{font-size:0.95rem;color:#2d5a3d;margin-bottom:8px;}
 .faq-item{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:14px 16px;margin-bottom:10px;}
@@ -27,79 +33,87 @@ a{color:#5bb0e5;}
 .faq-a{font-size:0.85rem;color:#555;}
 .footer{margin-top:36px;padding-top:16px;border-top:1px solid #ddd;font-size:0.75rem;color:#999;text-align:center;}
 </style>
+<script src="i18n.js?v=30b676ac"></script>
+<script src="parent-gate.js?v=30b676ac"></script>
 </head>
 <body>
 <div class="topbar">
-  <a href="index.html">← 首頁</a>
-  <span class="topbar-title">支援中心</span>
-  <a href="privacy.html">私隱</a>
+  <button class="back-btn" onclick="location.href='index.html'" data-zh="← 返回" data-sc="← 返回" data-en="← Back">← 返回</button>
+  <span class="topbar-title" data-zh="支援中心" data-sc="支持中心" data-en="Support centre">支援中心</span>
 </div>
 <div class="container">
 
-<h1>支援中心</h1>
-<div class="app-name">Sobo Math · 香港小四至小六 EDB 數學練習</div>
+<h1 data-zh="支援中心" data-sc="支持中心" data-en="Support centre">支援中心</h1>
+<div class="app-name" data-zh="Sobo Math · 香港小四至小六 EDB 數學練習" data-sc="Sobo Math · 香港小四至小六 EDB 数学练习" data-en="Sobo Math · Hong Kong P4–P6 EDB maths practice">Sobo Math · 香港小四至小六 EDB 數學練習</div>
 
 <div class="contact-card">
-  <h3>📧 聯絡我們</h3>
-  <p>如您遇到任何問題或有任何建議，歡迎透過以下方式聯絡我們：</p>
-  <p><strong>電郵：</strong><a href="mailto:sisiyeung1126@icloud.com">sisiyeung1126@icloud.com</a></p>
-  <p><strong>開發者：</strong>Ryan Yeung Studio</p>
-  <p>我們會在 1-2 個工作天內回覆您的查詢。</p>
+  <h3 data-zh="📧 聯絡我們" data-sc="📧 联络我们" data-en="📧 Contact us">📧 聯絡我們</h3>
+  <p data-zh="如您遇到任何問題或有任何建議，歡迎透過以下方式聯絡我們：" data-sc="如您遇到任何问题或有任何建议，欢迎透过以下方式联络我们：" data-en="If you have a problem or a suggestion, please contact us:">如您遇到任何問題或有任何建議，歡迎透過以下方式聯絡我們：</p>
+  <p data-zh-html="<strong>電郵：</strong>sisiyeung1126@icloud.com" data-sc-html="<strong>电邮：</strong>sisiyeung1126@icloud.com" data-en-html="<strong>Email:</strong> sisiyeung1126@icloud.com"><strong>電郵：</strong>sisiyeung1126@icloud.com</p>
+  <p data-zh-html="<strong>開發者：</strong>Ryan Yeung Studio" data-sc-html="<strong>开发者：</strong>Ryan Yeung Studio" data-en-html="<strong>Developer:</strong> Ryan Yeung Studio"><strong>開發者：</strong>Ryan Yeung Studio</p>
+  <p data-zh="我們會在 1-2 個工作天內回覆您的查詢。" data-sc="我们会在 1-2 个工作天内回复您的查询。" data-en="We aim to reply within 1–2 working days.">我們會在 1-2 個工作天內回覆您的查詢。</p>
 </div>
 
-<h2>常見問題 (FAQ)</h2>
+<h2 data-zh="常見問題 (FAQ)" data-sc="常见问题 (FAQ)" data-en="Frequently asked questions (FAQ)">常見問題 (FAQ)</h2>
 
 <div class="faq-item">
-  <div class="faq-q">Q: 如何訂閱 PRO？</div>
-  <div class="faq-a">全部 41 個單元免費循序開放（完成上一單元後解鎖下一單元），無需訂閱即可開始學習。當每日能量用完、想跳轉任意單元靈活練習、做計時完整卷（依年級 15–25 題）或無限自適應複習時，會看到 PRO 訂閱選項；也可在「設定」中隨時查看。我們提供月費和年費方案；免費試用只會向 App Store 確認合資格的用戶顯示，期限及價格以購買畫面為準。</div>
-</div>
-
-<div class="faq-item">
-  <div class="faq-q">Q: 如何取消訂閱？</div>
-  <div class="faq-a">前往 iPhone/iPad 的「設定」→ 點擊您的名稱 →「訂閱項目」→ 選擇本 App →「取消訂閱」。取消後仍可使用至當前付費週期結束。</div>
+  <div class="faq-q" data-zh="Q: 如何訂閱 PRO？" data-sc="Q: 如何订阅 PRO？" data-en="Q: How do I subscribe to PRO?">Q: 如何訂閱 PRO？</div>
+  <div class="faq-a" data-zh="全部 41 個單元免費循序開放（完成上一單元後解鎖下一單元），無需訂閱即可開始學習。當每日能量用完、想跳轉任意單元靈活練習、做計時完整卷（依年級 15–25 題）或無限自適應複習時，會看到 PRO 訂閱選項；也可在「設定」中隨時查看。我們提供月費和年費方案；免費試用只會向 App Store 確認合資格的用戶顯示，期限及價格以購買畫面為準。" data-sc="全部 41 个单元免费循序开放（完成上一单元后解锁下一单元），无需订阅即可开始学习。当每日能量用完、想跳转任意单元灵活练习、做计时完整卷（依年级 15–25 题）或无限自适应复习时，会看到 PRO 订阅选项；也可在「设定」中随时查看。我们提供月费和年费方案；免费试用只会向 App Store 确认合资格的用户显示，期限及价格以购买画面为准。" data-en="All 41 units unlock in order for free (finish one unit to open the next) — no subscription needed to start. You will see the PRO option when daily energy runs out, when you want to jump to any unit, take a timed full paper (15–25 questions by year group), or use unlimited adaptive review; you can also open it any time in Settings. We offer monthly and yearly plans. Free trials appear only for users Apple confirms as eligible; length and price follow the purchase screen.">全部 41 個單元免費循序開放（完成上一單元後解鎖下一單元），無需訂閱即可開始學習。當每日能量用完、想跳轉任意單元靈活練習、做計時完整卷（依年級 15–25 題）或無限自適應複習時，會看到 PRO 訂閱選項；也可在「設定」中隨時查看。我們提供月費和年費方案；免費試用只會向 App Store 確認合資格的用戶顯示，期限及價格以購買畫面為準。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Q: 換了新手機，學習進度會丟失嗎？</div>
-  <div class="faq-a">學習進度儲存在裝置本機。如果更換裝置，進度需要重新累積。訂閱狀態可以透過「恢復購買」功能恢復。</div>
+  <div class="faq-q" data-zh="Q: 如何取消訂閱？" data-sc="Q: 如何取消订阅？" data-en="Q: How do I cancel a subscription?">Q: 如何取消訂閱？</div>
+  <div class="faq-a" data-zh="前往 iPhone/iPad 的「設定」→ 點擊您的名稱 →「訂閱項目」→ 選擇本 App →「取消訂閱」。取消後仍可使用至當前付費週期結束。" data-sc="前往 iPhone/iPad 的「设定」→ 点击您的名称 →「订阅项目」→ 选择本 App →「取消订阅」。取消后仍可使用至当前付费周期结束。" data-en="Go to iPhone/iPad Settings → tap your name → Subscriptions → select this app → Cancel Subscription. After cancelling you can keep using PRO until the current paid period ends.">前往 iPhone/iPad 的「設定」→ 點擊您的名稱 →「訂閱項目」→ 選擇本 App →「取消訂閱」。取消後仍可使用至當前付費週期結束。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Q: 語音朗讀不正常怎麼辦？</div>
-  <div class="faq-a">請確保裝置已下載所需的語音檔案：前往「設定」→「輔助使用」→「閱讀與朗讀」→「聲音」→「中文」，選擇並下載所需語音。廣東話建議選用 Siri 聲線。</div>
+  <div class="faq-q" data-zh="Q: 換了新手機，學習進度會丟失嗎？" data-sc="Q: 换了新手机，学习进度会丢失吗？" data-en="Q: If I change phones, will my progress be lost?">Q: 換了新手機，學習進度會丟失嗎？</div>
+  <div class="faq-a" data-zh="學習進度儲存在裝置本機。如果更換裝置，進度需要重新累積。訂閱狀態可以透過「恢復購買」功能恢復。" data-sc="学习进度储存在装置本机。如果更换装置，进度需要重新累积。订阅状态可以透过「恢复购买」功能恢复。" data-en="Learning progress is stored on the device. If you change devices, progress needs to be rebuilt. Subscription status can be restored with Restore Purchases.">學習進度儲存在裝置本機。如果更換裝置，進度需要重新累積。訂閱狀態可以透過「恢復購買」功能恢復。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Q: 什麼是 EDB？課程如何對標？</div>
-  <div class="faq-a">EDB 是香港教育局（Education Bureau）的英文縮寫。本 App 的 41 個單元按教育局「小學數學課程指引」（小四至小六）編排，每個單元對應官方學習重點（例如 4N1 乘法、5A2 方程）。呈分試是升中派位下的三次校內評估（小五下、小六上、小六下），各校自行出卷；本 App 提供數學練習及模擬測驗，並非官方呈分試卷。</div>
+  <div class="faq-q" data-zh="Q: 語音朗讀不正常怎麼辦？" data-sc="Q: 语音朗读不正常怎么办？" data-en="Q: Speech read-aloud is not working — what should I do?">Q: 語音朗讀不正常怎麼辦？</div>
+  <div class="faq-a" data-zh="請確保裝置已下載所需的語音檔案：前往「設定」→「輔助使用」→「閱讀與朗讀」→「聲音」，按需要選擇中文（香港）、普通話或 English (UK)。廣東話建議選用 Siri 聲線。" data-sc="请确保装置已下载所需的语音档案：前往「设定」→「辅助使用」→「阅读与朗读」→「声音」，按需要选择中文（香港）、普通话或 English (UK)。广东话建议选用 Siri 声线。" data-en="Make sure the needed voice packs are downloaded: Settings → Accessibility → Spoken Content → Voices, then choose Chinese (Hong Kong), Mandarin, or English (UK) as needed. A Siri voice is recommended for Cantonese.">請確保裝置已下載所需的語音檔案：前往「設定」→「輔助使用」→「閱讀與朗讀」→「聲音」，按需要選擇中文（香港）、普通話或 English (UK)。廣東話建議選用 Siri 聲線。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Q: 適合什麼年級的學生？</div>
-  <div class="faq-a">本 App 專為香港小學四年級至六年級學生設計，涵蓋 41 個 EDB 對標數學單元，漸進式關卡學習。</div>
+  <div class="faq-q" data-zh="Q: 如何清除孩子的學習資料？" data-sc="Q: 如何清除孩子的学习资料？" data-en="Q: How do I erase my child’s learning data?">Q: 如何清除孩子的學習資料？</div>
+  <div class="faq-a" data-zh="由家長進入「設定 → 家長專區 → 清除本機學習資料」，完成家長驗證及再次確認後即可清除。資料只儲存在裝置，清除後不能復原；刪除 App 亦會移除本機資料。訂閱狀態不會被清除，可用原 Apple ID 恢復購買。" data-sc="由家长进入「设定 → 家长专区 → 清除本机学习资料」，完成家长验证及再次确认后即可清除。资料只储存在装置，清除后不能复原；删除 App 亦会移除本机资料。订阅状态不会被清除，可用原 Apple ID 恢复购买。" data-en="A parent can open Settings → Parent area → Erase local learning data. After parental verification and a second confirmation, the device data is erased and cannot be restored. Deleting the app also removes local data. Your subscription is not erased and can be restored with the original Apple ID.">由家長進入「設定 → 家長專區 → 清除本機學習資料」，完成家長驗證及再次確認後即可清除。資料只儲存在裝置，清除後不能復原；刪除 App 亦會移除本機資料。訂閱狀態不會被清除，可用原 Apple ID 恢復購買。</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Q: 免費版本包含什麼？</div>
-  <div class="faq-a">免費版本可循序解鎖單元關卡（完成上一單元後開放下一單元），並可循序學完 41 單元。能量：<strong>首日 15 點</strong>，之後每個香港日曆日 <strong>+15 點</strong>（最高 15；每答一題 -1、完成關卡 +2）。家長報告免費顯示 1 項優先弱項。升級 PRO：<strong>付費後可跳關靈活學</strong>，並享無限能量、計時模擬（15–25 題）、無限自適應複習及較多弱項分析（最多 6 項＋3 項優先）。模擬測驗可先免費體驗 10 題。訂閱價格、免費試用資格及期限以 App Store 購買畫面顯示為準。</div>
+  <div class="faq-q" data-zh="Q: 什麼是 EDB？課程如何對標？" data-sc="Q: 什么是 EDB？课程如何对标？" data-en="Q: What is EDB, and how does the curriculum align?">Q: 什麼是 EDB？課程如何對標？</div>
+  <div class="faq-a" data-zh="EDB 是香港教育局（Education Bureau）的英文縮寫。本 App 的 41 個單元按教育局「小學數學課程指引」（小四至小六）編排，每個單元對應官方學習重點（例如 4N1 乘法、5A2 方程）。呈分試是升中派位下的三次校內評估（小五下、小六上、小六下），各校自行出卷；本 App 提供數學練習及模擬測驗，並非官方呈分試卷。詳情可於「家長報告」頁查看說明。" data-sc="EDB 是香港教育局（Education Bureau）的英文缩写。本 App 的 41 个单元按教育局「小学数学课程指引」（小四至小六）编排，每个单元对应官方学习重点（例如 4N1 乘法、5A2 方程）。呈分试是升中派位下的三次校内评估（小五下、小六上、小六下），各校自行出卷；本 App 提供数学练习及模拟测验，并非官方呈分试卷。详情可于「家长报告」页查看说明。" data-en="EDB is the Education Bureau of Hong Kong. Our 41 units follow the EDB Primary Mathematics Curriculum Guide (P4–P6); each unit maps to an official learning focus (e.g. 4N1 multiplication, 5A2 equations). Pre-Secondary One Attainment Tests (呈分試) are three school-based assessments used for secondary placement (P5 lower, P6 upper, P6 lower); each school writes its own papers. This app provides maths practice and mock exams — it is not an official TSA paper. See the Parent Report page for more detail.">EDB 是香港教育局（Education Bureau）的英文縮寫。本 App 的 41 個單元按教育局「小學數學課程指引」（小四至小六）編排，每個單元對應官方學習重點（例如 4N1 乘法、5A2 方程）。呈分試是升中派位下的三次校內評估（小五下、小六上、小六下），各校自行出卷；本 App 提供數學練習及模擬測驗，並非官方呈分試卷。詳情可於「家長報告」頁查看說明。</div>
 </div>
 
-<h2>訂閱資訊</h2>
+<div class="faq-item">
+  <div class="faq-q" data-zh="Q: 適合什麼年級的學生？" data-sc="Q: 适合什么年级的学生？" data-en="Q: Which year groups is this for?">Q: 適合什麼年級的學生？</div>
+  <div class="faq-a" data-zh="本 App 專為香港小學四年級至六年級學生設計，涵蓋 41 個 EDB 對標數學單元，漸進式關卡學習。" data-sc="本 App 专为香港小学四年级至六年级学生设计，涵盖 41 个 EDB 对标数学单元，渐进式关卡学习。" data-en="This app is made for Hong Kong Primary 4 to Primary 6 students, covering 41 EDB-aligned maths units with progressive stages.">本 App 專為香港小學四年級至六年級學生設計，涵蓋 41 個 EDB 對標數學單元，漸進式關卡學習。</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q" data-zh="Q: 免費版本包含什麼？" data-sc="Q: 免费版本包含什么？" data-en="Q: What does the free version include?">Q: 免費版本包含什麼？</div>
+  <div class="faq-a" data-zh-html="免費版本可循序解鎖單元關卡（完成上一單元後開放下一單元），並可循序學完 41 單元。練習能量：<strong>首日 15 點</strong>，之後每個香港日曆日 <strong>+15 點</strong>（最高 15；每答一題 -1、完成關卡 +2）。家長報告免費可見全部弱項名稱，並提供 1 鍵直達練習。升級 PRO：<strong>付費後可跳關靈活學</strong>，並享無限練習能量、計時模擬（15–25 題）、無限自適應複習、弱項全鍵直達練習，以及備戰計劃／匯出給老師。模擬測驗可先免費體驗 10 題。訂閱價格、免費試用資格及期限以 App Store 購買畫面顯示為準。" data-sc-html="免费版本可循序解锁单元关卡（完成上一单元后开放下一单元），并可循序学完 41 单元。练习能量：<strong>首日 15 点</strong>，之后每个香港日历日 <strong>+15 点</strong>（最高 15；每答一题 -1、完成关卡 +2）。家长报告免费可见全部弱项名称，并提供 1 键直达练习。升级 PRO：<strong>付费后可跳关灵活学</strong>，并享无限练习能量、计时模拟（15–25 题）、无限自适应复习、弱项全键直达练习，以及备战计划／导出给老师。模拟测验可先免费体验 10 题。订阅价格、免费试用资格及期限以 App Store 购买画面显示为准。" data-en-html="The free version unlocks unit stages in order (finish one unit to open the next) and lets you complete all 41 units that way. Practice energy: <strong>15 points on day one</strong>, then <strong>+15 each Hong Kong calendar day</strong> (cap 15; −1 per question answered, +2 when you finish a stage). Parent Report shows all weak-spot names for free, with one-tap practice links. Upgrade to PRO: <strong>jump units freely after purchase</strong>, plus unlimited practice energy, timed mocks (15–25 questions), unlimited adaptive review, full weak-spot practice links, and prep plans / export for teachers. Mock exams include a free 10-question try. Subscription price, free-trial eligibility, and length follow the App Store purchase screen.">免費版本可循序解鎖單元關卡（完成上一單元後開放下一單元），並可循序學完 41 單元。練習能量：<strong>首日 15 點</strong>，之後每個香港日曆日 <strong>+15 點</strong>（最高 15；每答一題 -1、完成關卡 +2）。家長報告免費可見全部弱項名稱，並提供 1 鍵直達練習。升級 PRO：<strong>付費後可跳關靈活學</strong>，並享無限練習能量、計時模擬（15–25 題）、無限自適應複習、弱項全鍵直達練習，以及備戰計劃／匯出給老師。模擬測驗可先免費體驗 10 題。訂閱價格、免費試用資格及期限以 App Store 購買畫面顯示為準。</div>
+</div>
+
+<h2 data-zh="訂閱資訊" data-sc="订阅资讯" data-en="Subscription details">訂閱資訊</h2>
 <ul>
-  <li><strong>訂閱名稱：</strong>Premium 訂閱（PRO）</li>
-  <li><strong>月費：</strong>價格以 App Store 購買畫面為準 · 按月自動續期</li>
-  <li><strong>年費：</strong>價格以 App Store 購買畫面為準 · 按年自動續期 · 合資格新用戶或會獲免費試用（期限以 App Store 為準）</li>
-  <li><strong>付款：</strong>確認購買後從 Apple ID 帳戶扣款</li>
-  <li><strong>續費：</strong>當前週期結束前 24 小時內自動扣款；可於「設定 → Apple ID → 訂閱項目」隨時取消</li>
-  <li><strong>恢復購買：</strong>Paywall 或「設定 → 恢復購買」；需使用購買時的 Apple ID</li>
-  <li><strong>管理：</strong>設定 → Apple ID → 訂閱項目</li>
+  <li data-zh-html="<strong>訂閱名稱：</strong>Premium 訂閱（PRO）" data-sc-html="<strong>订阅名称：</strong>Premium 订阅（PRO）" data-en-html="<strong>Subscription name:</strong> Premium (PRO)"><strong>訂閱名稱：</strong>Premium 訂閱（PRO）</li>
+  <li data-zh-html="<strong>月費：</strong>價格以 App Store 購買畫面為準 · 按月自動續期" data-sc-html="<strong>月费：</strong>价格以 App Store 购买画面为准 · 按月自动续期" data-en-html="<strong>Monthly:</strong> price as shown on the App Store purchase screen · auto-renews monthly"><strong>月費：</strong>價格以 App Store 購買畫面為準 · 按月自動續期</li>
+  <li data-zh-html="<strong>年費：</strong>價格以 App Store 購買畫面為準 · 按年自動續期 · 合資格新用戶或會獲免費試用（期限以 App Store 為準）" data-sc-html="<strong>年费：</strong>价格以 App Store 购买画面为准 · 按年自动续期 · 合资格新用户或会获免费试用（期限以 App Store 为准）" data-en-html="<strong>Yearly:</strong> price as shown on the App Store purchase screen · auto-renews yearly · eligible new users may get a free trial (length as shown on the App Store)"><strong>年費：</strong>價格以 App Store 購買畫面為準 · 按年自動續期 · 合資格新用戶或會獲免費試用（期限以 App Store 為準）</li>
+  <li data-zh-html="<strong>付款：</strong>確認購買後從 Apple ID 帳戶扣款" data-sc-html="<strong>付款：</strong>确认购买后从 Apple ID 帐户扣款" data-en-html="<strong>Payment:</strong> charged to your Apple ID account after you confirm purchase"><strong>付款：</strong>確認購買後從 Apple ID 帳戶扣款</li>
+  <li data-zh-html="<strong>續費：</strong>當前週期結束前 24 小時內自動扣款；可於「設定 → Apple ID → 訂閱項目」隨時取消" data-sc-html="<strong>续费：</strong>当前周期结束前 24 小时内自动扣款；可于「设定 → Apple ID → 订阅项目」随时取消" data-en-html="<strong>Renewal:</strong> charged automatically within 24 hours before the period ends; cancel any time in Settings → Apple ID → Subscriptions"><strong>續費：</strong>當前週期結束前 24 小時內自動扣款；可於「設定 → Apple ID → 訂閱項目」隨時取消</li>
+  <li data-zh-html="<strong>恢復購買：</strong>Paywall 或「設定 → 恢復購買」；需使用購買時的 Apple ID" data-sc-html="<strong>恢复购买：</strong>Paywall 或「设定 → 恢复购买」；需使用购买时的 Apple ID" data-en-html="<strong>Restore purchases:</strong> from the paywall or Settings → Restore Purchases; use the same Apple ID you bought with"><strong>恢復購買：</strong>Paywall 或「設定 → 恢復購買」；需使用購買時的 Apple ID</li>
+  <li data-zh-html="<strong>管理：</strong>設定 → Apple ID → 訂閱項目" data-sc-html="<strong>管理：</strong>设定 → Apple ID → 订阅项目" data-en-html="<strong>Manage:</strong> Settings → Apple ID → Subscriptions"><strong>管理：</strong>設定 → Apple ID → 訂閱項目</li>
 </ul>
 
-<h2>相關連結</h2>
+<h2 data-zh="相關連結" data-sc="相关连结" data-en="Related links">相關連結</h2>
 <ul>
-  <li><a href="privacy.html">私隱政策</a></li>
-  <li><a href="edb_alignment.html">EDB 課程對標報告</a></li>
-  <li>使用條款 (EULA)：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 標準 EULA</a></li>
+  <li><a href="privacy.html" data-zh="私隱政策" data-sc="隐私政策" data-en="Privacy policy">私隱政策</a></li>
+  <li><a href="edb_alignment.html" data-zh="EDB 課程對標報告" data-sc="EDB 课程对标报告" data-en="EDB curriculum alignment report">EDB 課程對標報告</a></li>
+  <li><span data-zh="使用條款 (EULA)：" data-sc="使用条款 (EULA)：" data-en="Terms of use (EULA):">使用條款 (EULA)：</span>
+    <button type="button" class="legal-link" onclick="openSupportExternal('https://www.apple.com/legal/internet-services/itunes/dev/stdeula/')" data-zh="Apple 標準 EULA" data-sc="Apple 标准 EULA" data-en="Apple Standard EULA">Apple 標準 EULA</button>
+  </li>
 </ul>
 
 <div class="footer">
@@ -107,5 +121,30 @@ a{color:#5bb0e5;}
 </div>
 
 </div>
+<script>
+function openSupportExternal(url) {
+  if (!window.ParentGate || !ParentGate.request) return;
+  ParentGate.request({
+    reason: 'external_link',
+    onSuccess: function () {
+      try {
+        if (window.AndroidApp && AndroidApp.openURL) {
+          AndroidApp.openURL(url);
+          return;
+        }
+      } catch (e) {}
+      window.open(url, '_blank', 'noopener');
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.HKCi18n && HKCi18n.applyI18n) HKCi18n.applyI18n();
+  try {
+    var lang = HKCi18n && HKCi18n.getLang ? HKCi18n.getLang() : 'tc';
+    if (lang === 'en') document.title = 'Support centre — Sobo Math';
+    else if (lang === 'sc') document.title = '支持中心 — Sobo Math';
+  } catch (e) {}
+});
+</script>
 </body>
 </html>
