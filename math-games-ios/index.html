@@ -3,23 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sobo Math — 香港小四至小六 EDB 數學練習。Ryan Yeung Studio。">
-<title>Sobo Math — Ryan Yeung Studio</title>
+<meta name="description" content="Sobo Math 數寶 — 香港小四至小六 EDB 數學練習。Ryan Yeung Studio。">
+<title>Sobo Math — 官方支援</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #f6f1e8;
-    --paper-deep: #efe7da;
-    --ink: #2a2824;
-    --ink-soft: #5c574f;
-    --ink-mute: #8a847a;
-    --line: rgba(42, 40, 36, 0.12);
-    --accent: #3d6b55;
-    --accent-soft: #e4efe8;
-    --shadow: 0 18px 48px rgba(42, 40, 36, 0.06);
-    --radius: 22px;
+    --navy: #0d2137;
+    --navy-mid: #143a57;
+    --gold: #ffd54f;
+    --gold-soft: #ffe9a3;
+    --ink: #e8eef4;
+    --ink-soft: #a8b8c8;
+    --ink-mute: #7a8fa3;
     --serif: "Noto Serif TC", "Songti TC", "PingFang TC", serif;
     --sans: "Noto Sans TC", "PingFang HK", "Helvetica Neue", sans-serif;
   }
@@ -29,8 +26,8 @@
   body {
     font-family: var(--sans);
     background:
-      radial-gradient(ellipse 80% 50% at 8% -8%, rgba(61, 107, 85, 0.07), transparent 55%),
-      linear-gradient(180deg, #f8f4ed 0%, var(--paper) 40%, var(--paper-deep) 100%);
+      radial-gradient(ellipse 70% 45% at 85% 0%, rgba(255, 213, 79, 0.12), transparent 55%),
+      linear-gradient(180deg, #0d2137 0%, #143a57 55%, #0d2137 100%);
     color: var(--ink);
     line-height: 1.7;
     min-height: 100vh;
@@ -46,126 +43,91 @@
   .back {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 0.55rem;
     font-size: 0.82rem;
     color: var(--ink-soft);
     text-decoration: none;
-    margin-bottom: 2.25rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid transparent;
     transition: color 0.2s, border-color 0.2s;
   }
 
   .back:hover {
-    color: var(--ink);
-    border-color: var(--line);
+    color: var(--gold);
+    border-color: rgba(255, 213, 79, 0.35);
+  }
+
+  .back-arrow {
+    display: inline-block;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+  }
+
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .brand-row svg {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
   }
 
   .eyebrow {
     font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
+    color: var(--gold);
+    margin-bottom: 0.45rem;
   }
 
   h1 {
     font-family: var(--serif);
-    font-size: clamp(2rem, 5vw, 2.55rem);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 0.35rem;
   }
 
   .sub {
     color: var(--ink-soft);
     font-size: 0.98rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .chip {
     display: inline-flex;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--accent);
-    background: var(--accent-soft);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--gold);
     padding: 0.3rem 0.65rem;
     border-radius: 999px;
-    margin-bottom: 1.25rem;
-  }
-
-  .card {
-    background: rgba(255, 252, 247, 0.72);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 1.35rem 1.4rem;
     margin-bottom: 1rem;
-    box-shadow: var(--shadow);
-  }
-
-  .card h2 {
-    font-family: var(--serif);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.45rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-    color: var(--ink-soft);
-    margin-bottom: 1rem;
-  }
-
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: inherit;
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.7rem 1.15rem;
-    border-radius: 999px;
-    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-  }
-
-  .btn:hover { transform: translateY(-1px); }
-
-  .btn-primary {
-    background: var(--ink);
-    color: var(--paper);
-  }
-
-  .btn-ghost {
-    background: transparent;
-    color: var(--ink-soft);
-    border: 1px solid var(--line);
-  }
-
-  .btn-ghost:hover {
-    color: var(--ink);
-    border-color: rgba(42, 40, 36, 0.28);
   }
 
   .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    margin: 0 0 1.75rem;
+    gap: 0.65rem;
+    margin: 0 0 1.35rem;
   }
 
   .stat {
     text-align: center;
-    padding: 1rem 0.5rem;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    background: rgba(255, 252, 247, 0.5);
+    padding: 0.9rem 0.45rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    background: rgba(13, 33, 55, 0.45);
   }
 
   .stat strong {
@@ -173,25 +135,85 @@
     font-family: var(--serif);
     font-size: 1.15rem;
     font-weight: 700;
-    margin-bottom: 0.15rem;
+    color: var(--gold);
+    margin-bottom: 0.1rem;
   }
 
   .stat span {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: var(--ink-mute);
   }
 
   .note {
     font-size: 0.82rem;
     color: var(--ink-mute);
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 1.25rem 1.3rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .card h2 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.4rem;
+  }
+
+  .card p {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.7rem 1.1rem;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .btn:hover { transform: translateY(-1px); }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
   }
 
   .footer {
-    margin-top: 2.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--line);
-    font-size: 0.75rem;
+    margin-top: 2.25rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.74rem;
     color: var(--ink-mute);
     text-align: center;
   }
@@ -201,6 +223,8 @@
     text-decoration: none;
   }
 
+  .footer a:hover { color: var(--gold); }
+
   @media (max-width: 420px) {
     .stats { grid-template-columns: 1fr; }
   }
@@ -208,10 +232,29 @@
 </head>
 <body>
   <div class="wrap">
-    <a class="back" href="/">← Ryan Yeung Studio</a>
+    <a class="back" href="/"><span class="back-arrow" aria-hidden="true"></span> Sobo Math 首頁</a>
 
-    <p class="eyebrow">Coming soon</p>
-    <span class="chip">P4–P6</span>
+    <div class="brand-row">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="crystal" x1="12" y1="8" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff3c4"/>
+            <stop offset="0.4" stop-color="#ffd54f"/>
+            <stop offset="1" stop-color="#d4a017"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#crystal)" d="M32 4 L52 24 L32 60 L12 24 Z"/>
+        <path fill="#fffceb" opacity="0.55" d="M32 4 L40 24 L32 36 L24 24 Z"/>
+        <path fill="#0d2137" opacity="0.18" d="M32 36 L52 24 L32 60 Z"/>
+        <circle cx="27" cy="26" r="2.2" fill="#0d2137"/>
+        <circle cx="37" cy="26" r="2.2" fill="#0d2137"/>
+      </svg>
+      <div>
+        <p class="eyebrow">Coming soon</p>
+        <span class="chip">P4–P6</span>
+      </div>
+    </div>
+
     <h1>Sobo Math</h1>
     <p class="sub">數寶陪你學數學 · 香港小四至小六 EDB 練習</p>
 
@@ -221,19 +264,19 @@
       <div class="stat"><strong>4,900+</strong><span>練習題</span></div>
     </div>
 
-    <p class="note">App Store 連結將於正式上架後更新。本 App 並非教育局或學校官方試卷。</p>
+    <p class="note">App Store 連結將於正式上架後更新。本 App 並非教育局或學校官方試卷。舊 App Store ID 6761062579 屬「小學中文大冒險」，並非本 App。</p>
 
     <div class="card">
       <h2>支援中心</h2>
       <p>訂閱、語音、進度與常見問題。</p>
       <div class="actions">
-        <a class="btn btn-primary" href="support.html">前往支援中心</a>
+        <a class="btn btn-gold" href="support.html">前往支援中心</a>
       </div>
     </div>
 
     <div class="card">
       <h2>私隱政策</h2>
-      <p>說明 Sobo Math 如何處理資料。舊 App Store ID 6761062579 屬「小學中文大冒險」，並非本 App。</p>
+      <p>說明 Sobo Math 如何處理資料。</p>
       <div class="actions">
         <a class="btn btn-ghost" href="privacy.html">查看私隱政策</a>
       </div>
