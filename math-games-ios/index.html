@@ -3,36 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobo Math — 官方支援</title>
+<meta name="description" content="Sobo Math — 香港小四至小六 EDB 數學練習。Ryan Yeung Studio。">
+<title>Sobo Math — Ryan Yeung Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,'PingFang HK','Noto Sans HK',sans-serif;background:#f1f8fd;color:#143a57;line-height:1.7;}
-.wrap{max-width:640px;margin:0 auto;padding:32px 20px 48px;}
-h1{font-size:1.6rem;font-weight:900;margin-bottom:6px;}
-.sub{color:#2f7fbf;font-weight:700;margin-bottom:28px;font-size:0.95rem;}
-.card{background:#fff;border:1.5px solid #dbeefb;border-radius:18px;padding:18px 20px;margin-bottom:14px;box-shadow:0 4px 16px rgba(29,86,127,0.08);}
-.card h2{font-size:1rem;margin-bottom:8px;}
-.card p{font-size:0.88rem;color:#444;margin-bottom:10px;}
-.card a{display:inline-block;background:#3f93cf;color:#fff;text-decoration:none;font-weight:800;padding:10px 16px;border-radius:12px;font-size:0.88rem;}
-.card a.secondary{background:#fff;color:#2f7fbf;border:1.5px solid #dbeefb;margin-left:8px;}
-.footer{margin-top:28px;font-size:0.75rem;color:#888;text-align:center;}
+  :root {
+    --paper: #f6f1e8;
+    --paper-deep: #efe7da;
+    --ink: #2a2824;
+    --ink-soft: #5c574f;
+    --ink-mute: #8a847a;
+    --line: rgba(42, 40, 36, 0.12);
+    --accent: #3d6b55;
+    --accent-soft: #e4efe8;
+    --shadow: 0 18px 48px rgba(42, 40, 36, 0.06);
+    --radius: 22px;
+    --serif: "Noto Serif TC", "Songti TC", "PingFang TC", serif;
+    --sans: "Noto Sans TC", "PingFang HK", "Helvetica Neue", sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background:
+      radial-gradient(ellipse 80% 50% at 8% -8%, rgba(61, 107, 85, 0.07), transparent 55%),
+      linear-gradient(180deg, #f8f4ed 0%, var(--paper) 40%, var(--paper-deep) 100%);
+    color: var(--ink);
+    line-height: 1.7;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: min(640px, calc(100% - 2.5rem));
+    margin: 0 auto;
+    padding: 1.5rem 0 3rem;
+  }
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin-bottom: 2.25rem;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .back:hover {
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 2.55rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .sub {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    margin-bottom: 2rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .card {
+    background: rgba(255, 252, 247, 0.72);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.35rem 1.4rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .card h2 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.45rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.7rem 1.15rem;
+    border-radius: 999px;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .btn:hover { transform: translateY(-1px); }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+  }
+
+  .btn-ghost:hover {
+    color: var(--ink);
+    border-color: rgba(42, 40, 36, 0.28);
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin: 0 0 1.75rem;
+  }
+
+  .stat {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255, 252, 247, 0.5);
+  }
+
+  .stat strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+  }
+
+  .stat span {
+    font-size: 0.72rem;
+    color: var(--ink-mute);
+  }
+
+  .note {
+    font-size: 0.82rem;
+    color: var(--ink-mute);
+    margin-bottom: 1.75rem;
+  }
+
+  .footer {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.75rem;
+    color: var(--ink-mute);
+    text-align: center;
+  }
+
+  .footer a {
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  @media (max-width: 420px) {
+    .stats { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Sobo Math</h1>
-  <p class="sub">數寶陪你學數學 · Ryan Yeung Studio</p>
-  <div class="card">
-    <h2>📧 支援中心</h2>
-    <p>訂閱、語音、進度與常見問題。</p>
-    <a href="support.html">前往支援中心</a>
+  <div class="wrap">
+    <a class="back" href="/">← Ryan Yeung Studio</a>
+
+    <p class="eyebrow">Coming soon</p>
+    <span class="chip">P4–P6</span>
+    <h1>Sobo Math</h1>
+    <p class="sub">數寶陪你學數學 · 香港小四至小六 EDB 練習</p>
+
+    <div class="stats" aria-label="課程規模">
+      <div class="stat"><strong>41</strong><span>EDB 單元</span></div>
+      <div class="stat"><strong>231</strong><span>關卡</span></div>
+      <div class="stat"><strong>4,900+</strong><span>練習題</span></div>
+    </div>
+
+    <p class="note">App Store 連結將於正式上架後更新。本 App 並非教育局或學校官方試卷。</p>
+
+    <div class="card">
+      <h2>支援中心</h2>
+      <p>訂閱、語音、進度與常見問題。</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="support.html">前往支援中心</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>私隱政策</h2>
+      <p>說明 Sobo Math 如何處理資料。舊 App Store ID 6761062579 屬「小學中文大冒險」，並非本 App。</p>
+      <div class="actions">
+        <a class="btn btn-ghost" href="privacy.html">查看私隱政策</a>
+      </div>
+    </div>
+
+    <p class="footer">© 2026 Ryan Yeung Studio · <a href="mailto:sisiyeung1126@icloud.com">sisiyeung1126@icloud.com</a></p>
   </div>
-  <div class="card">
-    <h2>🔒 私隱政策</h2>
-    <p>App Store 連結將於 MathGames 正式 listing 後更新（舊 ID 6761062579 為中文大冒險，非本 App）。</p>
-    <a href="privacy.html">查看私隱政策</a>
-  </div>
-  <p class="footer">© 2026 Ryan Yeung Studio · sisiyeung1126@icloud.com</p>
-</div>
 </body>
 </html>
