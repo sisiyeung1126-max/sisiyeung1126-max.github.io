@@ -144,6 +144,18 @@
     color: var(--ink-mute);
   }
 
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0 0 0.85rem;
+  }
+
+  .btn-lg {
+    font-size: 0.95rem;
+    padding: 0.85rem 1.35rem;
+  }
+
   .note {
     font-size: 0.82rem;
     color: var(--ink-mute);
@@ -250,7 +262,7 @@
         <circle cx="37" cy="26" r="2.2" fill="#0d2137"/>
       </svg>
       <div>
-        <p class="eyebrow">Coming soon</p>
+        <p class="eyebrow">App Store 現已上架</p>
         <span class="chip">P4–P6</span>
       </div>
     </div>
@@ -264,13 +276,16 @@
       <div class="stat"><strong>4,900+</strong><span>練習題</span></div>
     </div>
 
-    <p class="note">App Store 連結將於正式上架後更新。本 App 並非教育局或學校官方試卷。舊 App Store ID 6761062579 屬「小學中文大冒險」，並非本 App。</p>
+    <div class="cta-row">
+      <a class="btn btn-gold btn-lg" href="https://apps.apple.com/hk/app/id6785965928" target="_blank" rel="noopener noreferrer">App Store 立即下載</a>
+    </div>
+    <p class="note">本 App 為學習輔助工具，並非教育局（EDB）或學校官方試卷／教材。</p>
 
     <div class="card">
       <h2>支援中心</h2>
       <p>訂閱、語音、進度與常見問題。</p>
       <div class="actions">
-        <a class="btn btn-gold" href="support.html">前往支援中心</a>
+        <a class="btn btn-ghost" href="support.html">前往支援中心</a>
       </div>
     </div>
 
