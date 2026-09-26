@@ -1,7 +1,10 @@
 /**
- * parent-gate.js — short adult verification before parent-only and purchase UI.
- * A successful challenge is remembered in this web session long enough to cover
- * open-paywall → StoreKit purchase (Wave Energy-P0: 12 min, was 2 min).
+ * parent-gate.js — adult verification before parent-only and purchase UI.
+ * Passcode / Face ID is used when the device can evaluate it. If that check
+ * cannot run or times out, a multi-step adult task (not a simple sum) plus
+ * press-and-hold is the fallback. A successful check is remembered in this
+ * web session long enough to cover open-paywall → StoreKit purchase
+ * (Wave Energy-P0: 12 min, was 2 min).
  */
 var ParentGate = (function(){
   'use strict';
@@ -52,6 +55,10 @@ var ParentGate = (function(){
 
   function removeGate(){
     var old = document.getElementById('parentGateOverlay');
+    if (old && old._unlockTimer) {
+      clearTimeout(old._unlockTimer);
+      old._unlockTimer = null;
+    }
     if (old && old.parentNode) old.parentNode.removeChild(old);
     for (var i = 0; i < inerted.length; i++) {
       if (!inerted[i].hadInert) inerted[i].el.removeAttribute('inert');
@@ -69,27 +76,38 @@ var ParentGate = (function(){
       if (options.onSuccess) options.onSuccess();
       return;
     }
-    var isIOSApp = !!(window.__deviceInfo && window.__deviceInfo.platform === 'iOS');
-    if (isIOSApp && !options._nativeAttempted &&
+    var nativePlatform = (window.__deviceInfo && window.__deviceInfo.platform) || '';
+    var isNativeApp = nativePlatform === 'iOS' || nativePlatform === 'Android';
+    if (isNativeApp && !options._nativeAttempted &&
         window.AndroidApp && typeof window.AndroidApp.requestParentAuth === 'function') {
       options._nativeAttempted = true;
       var settled = false;
-      // Kids-category production rule: iOS device-owner auth must fail closed.
-      // The web challenge below is for browser preview only, never an iOS fallback.
+      // Passcode / Face ID when the device can evaluate it.
+      // If that check cannot run, or it does not finish within 15 seconds,
+      // fall back to a device-independent multi-step adult task (not a simple sum).
       var fallbackTimer = setTimeout(function(){
         if (settled) return;
         settled = true;
         try { if (window.EventTracker) EventTracker.log('parent_gate_result', { method:'native', ok:0, reason:'timeout' }); } catch(eLog){}
-        if (options.onCancel) options.onCancel();
+        showAdultChallenge(options);
       }, 15000);
       window.AndroidApp.requestParentAuth(function(verified){
+        var granted = verified === true;
+        if (granted) {
+          clearTimeout(fallbackTimer);
+          try { if (window.EventTracker) EventTracker.log('parent_gate_result', { method:'native', ok:1 }); } catch(eLog){}
+          unlock();
+          if (settled) removeGate();
+          settled = true;
+          if (options.onSuccess) options.onSuccess();
+          return;
+        }
         if (settled) return;
         settled = true;
         clearTimeout(fallbackTimer);
-        if (verified) {
-          try { if (window.EventTracker) EventTracker.log('parent_gate_result', { method:'native', ok:1 }); } catch(eLog){}
-          unlock();
-          if (options.onSuccess) options.onSuccess();
+        if (verified === 'unavailable') {
+          try { if (window.EventTracker) EventTracker.log('parent_gate_result', { method:'native', ok:0, reason:'unavailable' }); } catch(eUn){}
+          showAdultChallenge(options);
           return;
         }
         try { if (window.EventTracker) EventTracker.log('parent_gate_result', { method:'native', ok:0, reason:'denied' }); } catch(eLog2){}
@@ -97,16 +115,21 @@ var ParentGate = (function(){
       });
       return;
     }
-    if (isIOSApp) {
-      // Native bridge unavailable or already attempted: do not downgrade to a
-      // child-solvable arithmetic prompt in production.
+    if (isNativeApp && options._nativeAttempted) {
       try { if (window.EventTracker) EventTracker.log('parent_gate_result', { method:'native', ok:0, reason:'unavailable' }); } catch(eUnavailable){}
       if (options.onCancel) options.onCancel();
       return;
     }
+    showAdultChallenge(options);
+  }
+
+  function showAdultChallenge(options){
+    options = options || {};
     removeGate();
-    // Browser-preview fallback only. Use a multi-step adult check plus hold;
-    // production iOS always uses device-owner authentication above.
+    // Same fallback the paywall uses when passcode / Face ID cannot run
+    // or times out: multi-step adult arithmetic (not a simple sum) plus hold.
+    // Callers that then open an external URL set parentGatePassed so native
+    // openURL still leaves the app. Denial never reaches this task.
     var factorA = 17 + Math.floor(Math.random() * 13);
     var factorB = 14 + Math.floor(Math.random() * 12);
     var offset = 37 + Math.floor(Math.random() * 53);
@@ -138,9 +161,9 @@ var ParentGate = (function(){
         '<h2 id="parentGateTitle" style="margin:8px 0;color:#143a57;font-size:1.2rem">' +
           t('請家長完成驗證', '请家长完成验证', 'Parent verification') + '</h2>' +
         '<p style="color:#5a6282;line-height:1.5;margin:0 0 14px">' +
-          t('此區域包含家長資料、外部操作或購買選項。瀏覽器預覽請由成年人完成驗證。',
-            '此区域包含家长资料、外部操作或购买选项。浏览器预览请由成年人完成验证。',
-            'This area includes parent information, external actions, or purchase options. An adult should complete this browser-preview check.') + '</p>' +
+          t('此區域包含家長資料、外部操作或購買選項。請成年人完成驗證（先計算，再按住確認）。',
+            '此区域包含家长资料、外部操作或购买选项。请成年人完成验证（先计算，再按住确认）。',
+            'This area includes parent information, external actions, or purchase options. An adult should work out the answer, then press and hold to confirm.') + '</p>' +
         '<label for="parentGateAnswer" style="display:block;font-weight:900;color:#143a57;margin-bottom:8px">' +
           factorA + ' × ' + factorB + ' + ' + offset + ' = ?</label>' +
         '<input id="parentGateAnswer" type="number" inputmode="numeric" autocomplete="off" ' +
@@ -164,6 +187,35 @@ var ParentGate = (function(){
     var input = document.getElementById('parentGateAnswer');
     var error = document.getElementById('parentGateError');
     var confirmBtn = document.getElementById('parentGateConfirm');
+    function applyTemporaryLock(){
+      error.textContent = t(
+        '嘗試次數過多，30 秒後可再試。',
+        '尝试次数过多，30 秒后可再试。',
+        'Too many attempts. You can try again in 30 seconds.'
+      );
+      input.disabled = true;
+      confirmBtn.disabled = true;
+      if (overlay._unlockTimer) clearTimeout(overlay._unlockTimer);
+      var wait = Math.max(0, lockedUntil - Date.now());
+      overlay._unlockTimer = setTimeout(function(){
+        overlay._unlockTimer = null;
+        if (!document.getElementById('parentGateOverlay')) return;
+        attempts = 0;
+        lockedUntil = 0;
+        try {
+          sessionStorage.removeItem(ATTEMPTS_KEY);
+          sessionStorage.removeItem(LOCK_KEY);
+        } catch(e){}
+        input.disabled = false;
+        confirmBtn.disabled = false;
+        error.textContent = t(
+          '可以再試一次。',
+          '可以再试一次。',
+          'You can try again now.'
+        );
+        try { input.focus(); } catch(eFocus){}
+      }, wait);
+    }
     function confirm(){
       if (Date.now() < lockedUntil) return;
       if (Number(input.value) !== answer) {
@@ -173,9 +225,7 @@ var ParentGate = (function(){
         if (attempts >= MAX_ATTEMPTS) {
           lockedUntil = Date.now() + LOCK_MS;
           try { sessionStorage.setItem(LOCK_KEY, String(lockedUntil)); } catch(e){}
-          error.textContent = t('嘗試次數過多，請稍後再試。', '尝试次数过多，请稍后再试。', 'Too many attempts. Please try again later.');
-          input.disabled = true;
-          confirmBtn.disabled = true;
+          applyTemporaryLock();
           return;
         }
         error.textContent = t('答案不正確，請成年人再試一次。', '答案不正确，请成年人再试一次。', 'Incorrect answer. Please ask an adult to try again.');
@@ -227,9 +277,7 @@ var ParentGate = (function(){
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     };
     if (lockedUntil > Date.now()) {
-      error.textContent = t('驗證暫時鎖定，請稍後再試。', '验证暂时锁定，请稍后再试。', 'Verification locked briefly. Please try again later.');
-      input.disabled = true;
-      confirmBtn.disabled = true;
+      applyTemporaryLock();
     }
     setTimeout(function(){
       if (!input.disabled) input.focus();
