@@ -70,7 +70,13 @@
   function t(zh, sc, en) {
     var lang = getLang();
     if (lang === 'en') return (en != null && en !== '') ? en : zh;
-    if (lang === 'sc') return (sc != null && sc !== '') ? sc : zh;
+    if (lang === 'sc') {
+      var chosen = (sc != null && sc !== '') ? sc : zh;
+      try {
+        if (global.L10nTcSc && L10nTcSc.toSc) return L10nTcSc.toSc(chosen);
+      } catch (eSc) {}
+      return chosen;
+    }
     return zh;
   }
 
